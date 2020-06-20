@@ -22,8 +22,11 @@
     <None Include="..\src\cpp.hint" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\calls\VkCommandBuffer.cpp" />
     <ClCompile Include="..\src\calls\VkDevice.cpp" />
     <ClCompile Include="..\src\calls\VkInstance.cpp" />
+    <ClCompile Include="..\src\calls\VkPhysicalDevice.cpp" />
+    <ClCompile Include="..\src\calls\VkQueue.cpp" />
     <ClCompile Include="..\src\objects\VkDevice_T.cpp" />
     <ClCompile Include="..\src\objects\VkInstance_T.cpp" />
     <ClCompile Include="..\src\objects\VkPhysicalDevice_T.cpp" />

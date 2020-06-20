@@ -42,6 +42,15 @@
     <ClCompile Include="..\src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\calls\VkCommandBuffer.cpp">
+      <Filter>Source Files\calls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\calls\VkPhysicalDevice.cpp">
+      <Filter>Source Files\calls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\calls\VkQueue.cpp">
+      <Filter>Source Files\calls</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\framework.h">
