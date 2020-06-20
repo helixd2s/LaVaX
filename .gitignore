@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio Artifacts
+*/.vs/*
+*/.vs/
+*/.vs
+/.vs/*
+/.vs/
+/.vs
+.vs/
+.vs/*
+.vs
+build/*/.vs/*
+build/*/.vs/
+build/*/.vs
+build/.vs/*
+build/.vs/
+build/.vs
