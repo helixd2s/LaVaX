@@ -2,18 +2,13 @@
 
 #include "pch.h"
 #include "framework.h"
-
-#include "objects/VkInstance_T.hpp"
+#include "generals/objects.hpp"
 
 namespace dxv {
-	class VkPhysicalDevice_T {
+	class VkPhysicalDevice_T { 
 	public:
-		VkPhysicalDevice_T() {
-
-		}
-		VkPhysicalDevice_T(const dxv::VkInstance_T* instance) {
-
-		}
+		VkPhysicalDevice_T() {};
+		VkPhysicalDevice_T(const dxv::VkInstance_T* instance);
 
 	};
 };

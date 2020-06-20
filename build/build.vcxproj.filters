@@ -19,6 +19,9 @@
     <Filter Include="Source Files\objects">
       <UniqueIdentifier>{4d108900-30e0-4d13-8b9e-e89ba2cdc8f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\generals">
+      <UniqueIdentifier>{3ddddc1d-0f53-4cb7-8222-ea4f59f25664}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\objects\VkDevice_T.cpp">
@@ -55,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp">
       <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\generals\objects.hpp">
+      <Filter>Source Files\generals</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

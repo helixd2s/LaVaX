@@ -31,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\framework.h" />
+    <ClInclude Include="..\src\generals\objects.hpp" />
     <ClInclude Include="..\src\objects\VkDevice_T.hpp" />
     <ClInclude Include="..\src\objects\VkInstance_T.hpp" />
     <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp" />

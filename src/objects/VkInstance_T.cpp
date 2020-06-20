@@ -3,4 +3,8 @@
 
 namespace dxv {
 
+	VkInstance_T::VkInstance_T(const VkInstanceCreateInfo& createInfo) {
+
+	}
+
 };

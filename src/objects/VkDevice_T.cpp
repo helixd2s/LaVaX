@@ -3,6 +3,8 @@
 
 namespace dxv {
 
-	
+	VkDevice_T::VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, const VkDeviceCreateInfo& createInfo) {
+
+	}
 
 };
