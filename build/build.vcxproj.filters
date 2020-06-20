@@ -53,6 +53,9 @@
     <ClInclude Include="..\src\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\cpp.hint">

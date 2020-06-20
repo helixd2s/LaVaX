@@ -33,6 +33,7 @@
     <ClInclude Include="..\src\framework.h" />
     <ClInclude Include="..\src\objects\VkDevice_T.hpp" />
     <ClInclude Include="..\src\objects\VkInstance_T.hpp" />
+    <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp" />
     <ClInclude Include="..\src\pch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
