@@ -2,6 +2,17 @@
 
 Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 
+<img src="https://cdn.wccftech.com/wp-content/uploads/2015/03/Vulkan-API-31.jpg" width="400" alt="DXVulkan"/>
+
+### Why is need?
+
+- DirectX 12 Ultimate more optimized for games
+- Modern GPU support mostly for DirectX 12 Ultimate
+- Most features of GPU's implemented mostly for DirectX 12 Ultimate
+- Graphics development on UWP limited on DirectX 12 Ultimate only
+- Khronos Group not planned to support Vulkan API on the Windows Platforms
+- DirectX 12 has developer port for Windows 7 (but, WILL NO support for that) 
+
 
 ### Limitations
 
