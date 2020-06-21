@@ -1,9 +1,27 @@
-﻿  VkInstance.cpp
+﻿  VkCommandBuffer.cpp
+F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
+F:\Data\Projects\DXV\src\calls\VkCommandBuffer.cpp(5,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
+F:\Data\Projects\DXV\src\calls\VkCommandBuffer.cpp : message : see previous definition of 'BUILD_EXPORTS'
+  VkDevice.cpp
+F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
+F:\Data\Projects\DXV\src\calls\VkDevice.cpp(5,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
+F:\Data\Projects\DXV\src\calls\VkDevice.cpp : message : see previous definition of 'BUILD_EXPORTS'
+  VkInstance.cpp
+F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
+F:\Data\Projects\DXV\src\calls\VkInstance.cpp(5,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
+F:\Data\Projects\DXV\src\calls\VkInstance.cpp : message : see previous definition of 'BUILD_EXPORTS'
+  VkPhysicalDevice.cpp
 F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(4,28): warning C4091: 'typedef ': ignored on left of 'dxv::VkInstance_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(5,26): warning C4091: 'typedef ': ignored on left of 'dxv::VkDevice_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(6,34): warning C4091: 'typedef ': ignored on left of 'dxv::VkPhysicalDevice_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(7,36): warning C4091: 'typedef ': ignored on left of 'dxv::VkDescriptorLayout_T' when no variable is declared
+F:\Data\Projects\DXV\src\calls\VkPhysicalDevice.cpp(8,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
+F:\Data\Projects\DXV\src\calls\VkPhysicalDevice.cpp : message : see previous definition of 'BUILD_EXPORTS'
+  VkQueue.cpp
+F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
+F:\Data\Projects\DXV\src\calls\VkQueue.cpp(5,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
+F:\Data\Projects\DXV\src\calls\VkQueue.cpp : message : see previous definition of 'BUILD_EXPORTS'
   VkDevice_T.cpp
 F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(4,28): warning C4091: 'typedef ': ignored on left of 'dxv::VkInstance_T' when no variable is declared
@@ -22,4 +40,5 @@ F:\Data\Projects\DXV\src\generals\objects.hpp(4,28): warning C4091: 'typedef ': 
 F:\Data\Projects\DXV\src\generals\objects.hpp(5,26): warning C4091: 'typedef ': ignored on left of 'dxv::VkDevice_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(6,34): warning C4091: 'typedef ': ignored on left of 'dxv::VkPhysicalDevice_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(7,36): warning C4091: 'typedef ': ignored on left of 'dxv::VkDescriptorLayout_T' when no variable is declared
+     Creating library F:\Data\Projects\DXV\build\x64\Debug\build.lib and object F:\Data\Projects\DXV\build\x64\Debug\build.exp
   build.vcxproj -> F:\Data\Projects\DXV\build\x64\Debug\build.dll

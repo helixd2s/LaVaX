@@ -22,6 +22,18 @@
     <Filter Include="Source Files\generals">
       <UniqueIdentifier>{3ddddc1d-0f53-4cb7-8222-ea4f59f25664}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\vkh">
+      <UniqueIdentifier>{b7084a23-1482-4cfc-b70c-2c81d5cf94da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\glm">
+      <UniqueIdentifier>{62238b1f-591b-446c-8c69-0123c134e19b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vulkan">
+      <UniqueIdentifier>{fafedca6-761c-44a6-995a-98dcd700d5d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dxv">
+      <UniqueIdentifier>{02f13bc1-618f-4895-a4bd-17d393cef236}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\objects\VkDevice_T.cpp">
@@ -71,10 +83,160 @@
     <ClInclude Include="..\src\generals\objects.hpp">
       <Filter>Source Files\generals</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkh\bitfields.hpp">
+      <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkt3\core.hpp">
+      <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkh\enums.hpp">
+      <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkh\handle.hpp">
+      <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkh\helpers.hpp">
+      <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkh\structures.hpp">
+      <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\common.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\exponential.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\ext.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\fwd.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\geometric.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\glm.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\integer.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat2x2.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat2x3.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat2x4.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat3x2.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat3x3.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat3x4.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat4x2.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat4x3.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\mat4x4.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\matrix.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\packing.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\trigonometric.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\vec2.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\vec3.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\vec4.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\glm\vector_relational.hpp">
+      <Filter>Header Files\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dxv\DXVulkan.hpp">
+      <Filter>Header Files\dxv</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_icd.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_layer.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_platform.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_sdk_platform.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan.hpp">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_android.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_beta.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_core.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_fuchsia.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_ggp.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_ios.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_macos.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_metal.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_vi.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_wayland.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_win32.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_xcb.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_xlib.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_xlib_xrandr.h">
+      <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\cpp.hint">
-      <Filter>Source Files\objects</Filter>
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>

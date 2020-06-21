@@ -8,7 +8,7 @@ namespace dxv {
 	class VkInstance_T { 
 	public:
 		VkInstance_T() {}
-		VkInstance_T(const VkInstanceCreateInfo& createInfo, const VkAllocationCallbacks* pAllocator);
+		VkInstance_T(const VkAllocationCallbacks* pAllocator, const VkInstanceCreateInfo& createInfo);
 
 	};
 };
