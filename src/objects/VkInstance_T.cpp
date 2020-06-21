@@ -4,7 +4,9 @@
 
 namespace dxv {
 
-	VkInstance_T::VkInstance_T(const VkInstanceCreateInfo& createInfo, const VkAllocationCallbacks& pAllocator) {
+    // 
+    VkInstance_T::VkInstance_T(HPTR(VkInstanceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) pAllocator)
+    {
         UINT dxgiFactoryFlags = 0;
 
 #if defined(_DEBUG)
@@ -22,10 +24,12 @@ namespace dxv {
         }
 #endif
 
-		ThrowIfFailed(CreateDXGIFactory2(dxgiFactoryFlags, IID_PPV_ARGS(&this->factory))); // TODO: VkResult Conversion
-	}
+        ThrowIfFailed(CreateDXGIFactory2(dxgiFactoryFlags, IID_PPV_ARGS(&this->factory))); // TODO: VkResult Conversion
+    };
 
-    VkResult VkInstance_T::EnumeratePhysicalDevices(uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices) {
+    // 
+    VkResult VkInstance_T::EnumeratePhysicalDevices(uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices) 
+    {
         if (this->devices.size() <= 0) {
             ComPtr<IDXGIAdapter1> adapter = {};
             for (UINT adapterIndex = 0; DXGI_ERROR_NOT_FOUND != this->factory->EnumAdapters1(adapterIndex, &adapter); ++adapterIndex)

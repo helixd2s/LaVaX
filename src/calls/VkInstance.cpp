@@ -1,10 +1,11 @@
 #include <dxv/DXVulkan.hpp>
-#include "pch.h"
-#include "framework.h"
 
+#include "pch.h"
 #include "objects/VkInstance_T.hpp"
 
+#ifndef BUILD_EXPORTS
 #define BUILD_EXPORTS
+#endif
 
 namespace dxv {
 
@@ -14,9 +15,8 @@ namespace dxv {
         const VkAllocationCallbacks* pAllocator,
         VkInstance* pInstance
     )
-    {
-        // TODO: use pAllocator for allocate that class...
-        auto allocation = new VkInstance_T(*pCreateInfo, *pAllocator);
+    {   // TODO: use pAllocator for allocate that class...
+        auto allocation = new VkInstance_T(pCreateInfo, *pAllocator);
         *pInstance = VkInstance(allocation);
         return VK_SUCCESS; // TODO: Result Info
     };

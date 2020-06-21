@@ -4,14 +4,13 @@
 
 namespace dxv {
 
-	VkDevice_T::VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, const VkDeviceCreateInfo& createInfo, const VkAllocationCallbacks& callbacks) {
-
-        // TODO: Measure Feature Level By Extensions
+    VkDevice_T::VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks)
+    {   // TODO: Measure Feature Level By Extensions
         ThrowIfFailed(D3D12CreateDevice(
             physicalDevice->Get(),
             D3D_FEATURE_LEVEL_12_1,
             IID_PPV_ARGS(&device)
         )); // TODO: VkResult Conversion
-	}
+    };
 
 };

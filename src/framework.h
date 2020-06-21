@@ -9,6 +9,7 @@
 #include <vkh/enums.hpp>
 #include <vkh/structures.hpp>
 
+
 //*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
@@ -23,8 +24,8 @@
 // Windows Header Files
 #include <stdexcept>
 #include <windows.h>
-#include <d3d12.h>
 #include <dxgi1_6.h>
+#include <d3d12.h>
 #include <wrl.h>
 
 // Note that while ComPtr is used to manage the lifetime of resources on the CPU,

@@ -1,6 +1,7 @@
 #pragma once 
 
 #include <vulkan/vulkan.h>
+#define BUILD_EXPORTS
 
 #ifdef BUILD_EXPORTS
 #define BUILD_API __declspec(dllexport)

@@ -1,8 +1,10 @@
 #include <dxv/DXVulkan.hpp>
-#include "pch.h"
-#include "framework.h"
 
+#include "pch.h"
+
+#ifndef BUILD_EXPORTS
 #define BUILD_EXPORTS
+#endif
 
 namespace dxv {
 

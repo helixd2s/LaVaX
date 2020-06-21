@@ -1,15 +1,16 @@
 #include <dxv/DXVulkan.hpp>
-#include "pch.h"
-#include "framework.h"
 
+#include "pch.h" 
 #include "objects/VkDevice_T.hpp"
 #include "objects/VkPhysicalDevice_T.hpp"
 
+#ifndef BUILD_EXPORTS
 #define BUILD_EXPORTS
+#endif
 
 namespace dxv {
 
-    // Provided by VK_VERSION_1_0
+    // 
     BUILD_API VkResult vkCreateDevice(
         VkPhysicalDevice physicalDevice,
         const VkDeviceCreateInfo* pCreateInfo,
@@ -17,7 +18,7 @@ namespace dxv {
         VkDevice* pDevice
     )
     {   // TODO: use pAllocator for allocate that class...
-        auto allocation = new VkDevice_T(reinterpret_cast<VkPhysicalDevice_T*>(physicalDevice), *pCreateInfo, *pAllocator);
+        auto allocation = new VkDevice_T(reinterpret_cast<VkPhysicalDevice_T*>(physicalDevice), pCreateInfo, *pAllocator);
         *pDevice = VkDevice(allocation);
         return VK_SUCCESS; // TODO: Result Info
     };
