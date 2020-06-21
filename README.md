@@ -12,6 +12,7 @@ Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 - Graphics development on UWP limited on DirectX 12 Ultimate only
 - Khronos Group not planned to support Vulkan API on the Windows Platforms
 - DirectX 12 has developer port for Windows 7 (but, WILL NO support for that) 
+- Writing for both API are hard task for developers...
 
 
 ### Limitations
