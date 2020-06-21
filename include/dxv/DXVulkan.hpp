@@ -15,4 +15,15 @@ namespace dxv {
         const VkAllocationCallbacks* pAllocator,
         VkDevice* pDevice
     );
+
+    BUILD_API VkResult vkEnumeratePhysicalDevices(
+        VkInstance instance,
+        uint32_t* pPhysicalDeviceCount,
+        VkPhysicalDevice* pPhysicalDevices
+    );
+
+    BUILD_API VkResult vkCreateInstance(
+        const VkInstanceCreateInfo* pCreateInfo,
+        const VkAllocationCallbacks* pAllocator,
+        VkInstance* pInstance);
 };

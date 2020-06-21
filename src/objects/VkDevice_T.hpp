@@ -6,9 +6,12 @@
 
 namespace dxv {
 	class VkDevice_T { 
+	protected:
+		VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+		ComPtr<ID3D12Device> device = {};
 	public:
 		VkDevice_T() {}
-		VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, const VkAllocationCallbacks& callbacks, const VkDeviceCreateInfo& createInfo);
+		VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, const VkDeviceCreateInfo& createInfo, const VkAllocationCallbacks& callbacks);
 
 	};
 };

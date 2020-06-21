@@ -8,7 +8,11 @@ F:\Data\Projects\DXV\src\calls\VkDevice.cpp(5,1): warning C4005: 'BUILD_EXPORTS'
 F:\Data\Projects\DXV\src\calls\VkDevice.cpp : message : see previous definition of 'BUILD_EXPORTS'
   VkInstance.cpp
 F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
-F:\Data\Projects\DXV\src\calls\VkInstance.cpp(5,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
+F:\Data\Projects\DXV\src\generals\objects.hpp(4,28): warning C4091: 'typedef ': ignored on left of 'dxv::VkInstance_T' when no variable is declared
+F:\Data\Projects\DXV\src\generals\objects.hpp(5,26): warning C4091: 'typedef ': ignored on left of 'dxv::VkDevice_T' when no variable is declared
+F:\Data\Projects\DXV\src\generals\objects.hpp(6,34): warning C4091: 'typedef ': ignored on left of 'dxv::VkPhysicalDevice_T' when no variable is declared
+F:\Data\Projects\DXV\src\generals\objects.hpp(7,36): warning C4091: 'typedef ': ignored on left of 'dxv::VkDescriptorLayout_T' when no variable is declared
+F:\Data\Projects\DXV\src\calls\VkInstance.cpp(7,1): warning C4005: 'BUILD_EXPORTS': macro redefinition
 F:\Data\Projects\DXV\src\calls\VkInstance.cpp : message : see previous definition of 'BUILD_EXPORTS'
   VkPhysicalDevice.cpp
 F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
@@ -34,6 +38,7 @@ F:\Data\Projects\DXV\src\generals\objects.hpp(4,28): warning C4091: 'typedef ': 
 F:\Data\Projects\DXV\src\generals\objects.hpp(5,26): warning C4091: 'typedef ': ignored on left of 'dxv::VkDevice_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(6,34): warning C4091: 'typedef ': ignored on left of 'dxv::VkPhysicalDevice_T' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(7,36): warning C4091: 'typedef ': ignored on left of 'dxv::VkDescriptorLayout_T' when no variable is declared
+F:\Data\Projects\DXV\src\objects\VkInstance_T.cpp(43,57): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
   VkPhysicalDevice_T.cpp
 F:\Data\Projects\DXV\include\vkh\structures.hpp(1699,31): warning C4091: 'typedef ': ignored on left of 'vkh::VkClearValue' when no variable is declared
 F:\Data\Projects\DXV\src\generals\objects.hpp(4,28): warning C4091: 'typedef ': ignored on left of 'dxv::VkInstance_T' when no variable is declared

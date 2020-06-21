@@ -17,7 +17,7 @@ namespace dxv {
         VkDevice* pDevice
     )
     {   // TODO: use pAllocator for allocate that class...
-        auto allocation = new VkDevice_T(reinterpret_cast<VkPhysicalDevice_T*>(physicalDevice), *pAllocator, *pCreateInfo);
+        auto allocation = new VkDevice_T(reinterpret_cast<VkPhysicalDevice_T*>(physicalDevice), *pCreateInfo, *pAllocator);
         *pDevice = VkDevice(allocation);
         return VK_SUCCESS; // TODO: Result Info
     };
