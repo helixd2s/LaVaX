@@ -27,6 +27,8 @@
     <ClCompile Include="..\src\calls\VkInstance.cpp" />
     <ClCompile Include="..\src\calls\VkPhysicalDevice.cpp" />
     <ClCompile Include="..\src\calls\VkQueue.cpp" />
+    <ClCompile Include="..\src\objects\VkDescriptorSetLayout_T.cpp" />
+    <ClCompile Include="..\src\objects\VkDescriptorSet_T.cpp" />
     <ClCompile Include="..\src\objects\VkDevice_T.cpp" />
     <ClCompile Include="..\src\objects\VkInstance_T.cpp" />
     <ClCompile Include="..\src\objects\VkPhysicalDevice_T.cpp" />
@@ -65,6 +67,8 @@
     <ClInclude Include="..\include\dxv\DXVulkan.hpp" />
     <ClInclude Include="..\src\framework.h" />
     <ClInclude Include="..\src\generals\objects.hpp" />
+    <ClInclude Include="..\src\objects\VkDescriptorSetLayout_T.hpp" />
+    <ClInclude Include="..\src\objects\VkDescriptorSet_T.hpp" />
     <ClInclude Include="..\src\objects\VkDevice_T.hpp" />
     <ClInclude Include="..\src\objects\VkInstance_T.hpp" />
     <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp" />

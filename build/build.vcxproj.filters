@@ -63,6 +63,12 @@
     <ClCompile Include="..\src\calls\VkQueue.cpp">
       <Filter>Source Files\calls</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\objects\VkDescriptorSet_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkDescriptorSetLayout_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\framework.h">
@@ -232,6 +238,12 @@
     </ClInclude>
     <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vulkan_xlib_xrandr.h">
       <Filter>Header Files\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkDescriptorSet_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkDescriptorSetLayout_T.hpp">
+      <Filter>Source Files\objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

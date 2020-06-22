@@ -8,7 +8,8 @@
 #include <vkh/bitfields.hpp>
 #include <vkh/enums.hpp>
 #include <vkh/structures.hpp>
-
+#include <vector>
+#include <memory>
 
 //*********************************************************
 //
@@ -24,9 +25,10 @@
 // Windows Header Files
 #include <stdexcept>
 #include <windows.h>
-#include <dxgi1_6.h>
 #include <d3d12.h>
+#include <dxgi1_6.h>
 #include <wrl.h>
+#include <D3DX12/d3dx12.h>
 
 // Note that while ComPtr is used to manage the lifetime of resources on the CPU,
 // it has no understanding of the lifetime of resources on the GPU. Apps must account
