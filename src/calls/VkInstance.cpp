@@ -26,7 +26,7 @@ namespace dxv {
         VkInstance instance,
         uint32_t* pPhysicalDeviceCount,
         VkPhysicalDevice* pPhysicalDevices
-    ) 
+    )
     {
         return reinterpret_cast<VkInstance_T*>(instance)->EnumeratePhysicalDevices(pPhysicalDeviceCount, pPhysicalDevices);
     };

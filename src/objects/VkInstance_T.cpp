@@ -28,7 +28,7 @@ namespace dxv {
     };
 
     // 
-    VkResult VkInstance_T::EnumeratePhysicalDevices(uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices) 
+    VkResult VkInstance_T::EnumeratePhysicalDevices(uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices)
     {
         if (this->devices.size() <= 0) {
             ComPtr<IDXGIAdapter1> adapter = {};

@@ -9,5 +9,4 @@
   VkInstance_T.cpp
   VkPhysicalDevice_T.cpp
   pch.cpp
-     Creating library F:\Data\Projects\DXV\build\x64\Debug\build.lib and object F:\Data\Projects\DXV\build\x64\Debug\build.exp
   build.vcxproj -> F:\Data\Projects\DXV\build\x64\Debug\build.dll
