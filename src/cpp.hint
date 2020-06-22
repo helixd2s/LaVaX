@@ -1,2 +1,4 @@
+#ifndef BUILD_API
 #define BUILD_API __declspec(dllexport)
 #define BUILD_API __declspec(dllimport)
+#endif

@@ -20,8 +20,8 @@ namespace dxv {
 
                 // Enable additional debug layers.
                 dxgiFactoryFlags |= DXGI_CREATE_FACTORY_DEBUG;
-            }
-        }
+            };
+        };
 #endif
 
         ThrowIfFailed(CreateDXGIFactory2(dxgiFactoryFlags, IID_PPV_ARGS(&this->factory))); // TODO: VkResult Conversion
@@ -40,7 +40,7 @@ namespace dxv {
                 // Look Only for D3D12 Devices
                 if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE || !SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_12_0, _uuidof(ID3D12Device), nullptr))) { continue; }
                 this->devices.push_back(VkPhysicalDevice(new dxv::VkPhysicalDevice_T(this, adapter)));
-            }
+            };
         };
 
         if (pPhysicalDeviceCount) {

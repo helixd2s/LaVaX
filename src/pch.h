@@ -10,7 +10,5 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#define HPTR(NAME) const vkt::uni_dir<vkh::NAME,::NAME>&
-#define UPTR(NAME) const vkt::uni_arg<NAME>&
 
 #endif //PCH_H

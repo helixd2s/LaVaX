@@ -9,6 +9,10 @@
 #define BUILD_API __declspec(dllimport)
 #endif
 
+#ifndef BUILD_API 
+#define BUILD_API __declspec(dllexport)
+#endif
+
 namespace dxv {
     BUILD_API VkResult vkCreateDevice(
         VkPhysicalDevice physicalDevice,

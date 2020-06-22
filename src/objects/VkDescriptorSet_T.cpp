@@ -18,6 +18,6 @@ namespace dxv {
         // Per Binding Offsets and Full Range
         this->offsets = descriptorSetLayout->getOffsets();
         this->fullRange = descriptorSetLayout->getFullRange();
-    }
+    };
 
 };
