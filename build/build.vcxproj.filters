@@ -19,9 +19,6 @@
     <Filter Include="Source Files\objects">
       <UniqueIdentifier>{4d108900-30e0-4d13-8b9e-e89ba2cdc8f3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generals">
-      <UniqueIdentifier>{3ddddc1d-0f53-4cb7-8222-ea4f59f25664}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\vkh">
       <UniqueIdentifier>{b7084a23-1482-4cfc-b70c-2c81d5cf94da}</UniqueIdentifier>
     </Filter>
@@ -36,6 +33,12 @@
     </Filter>
     <Filter Include="Header Files\misc">
       <UniqueIdentifier>{7bd2bad5-796a-4d42-89de-d5fff81564e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\xvk">
+      <UniqueIdentifier>{219f0817-9ab1-4d6f-bc45-d67fb0a29a3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pch">
+      <UniqueIdentifier>{33c9f770-6bd5-45c1-b872-39df847ea66a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +57,6 @@
     <ClCompile Include="..\src\calls\VkInstance.cpp">
       <Filter>Source Files\calls</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\calls\VkCommandBuffer.cpp">
       <Filter>Source Files\calls</Filter>
     </ClCompile>
@@ -72,25 +72,19 @@
     <ClCompile Include="..\src\objects\VkDescriptorSetLayout_T.cpp">
       <Filter>Source Files\objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\pch\pch.cpp">
+      <Filter>Source Files\pch</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\objects\VkDevice_T.hpp">
       <Filter>Source Files\objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\objects\VkInstance_T.hpp">
       <Filter>Source Files\objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp">
       <Filter>Source Files\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\generals\objects.hpp">
-      <Filter>Source Files\generals</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vkt\include\vkh\bitfields.hpp">
       <Filter>Header Files\vkh</Filter>
@@ -283,6 +277,27 @@
     </ClInclude>
     <ClInclude Include="..\..\vkt\include\misc\tinyexr.h">
       <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\xvk\xvk.hpp">
+      <Filter>Header Files\xvk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\xvk\xvkBase.hpp">
+      <Filter>Header Files\xvk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\xvk\xvkInterface.hpp">
+      <Filter>Header Files\xvk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\xvk\xvkInterface.h">
+      <Filter>Header Files\xvk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pch\framework.h">
+      <Filter>Source Files\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pch\pch.h">
+      <Filter>Source Files\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pch\objects.hpp">
+      <Filter>Source Files\pch</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

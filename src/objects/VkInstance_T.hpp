@@ -1,13 +1,16 @@
 #pragma once
 
-#include "generals/objects.hpp"
+// 
+#include "pch/objects.hpp"
 
 // 
 namespace dxv {
     class VkInstance_T {
     protected:
-        std::vector<VkPhysicalDevice> devices = {};
         ComPtr<IDXGIFactory4> factory = {};
+        std::vector<VkPhysicalDevice> devices = {};
+        std::vector<const char*> enabledExtensions = {};
+        std::vector<const char*> enabledLayers = {};
 
     public:
         VkInstance_T() {}

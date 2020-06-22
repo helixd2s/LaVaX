@@ -32,7 +32,7 @@
     <ClCompile Include="..\src\objects\VkDevice_T.cpp" />
     <ClCompile Include="..\src\objects\VkInstance_T.cpp" />
     <ClCompile Include="..\src\objects\VkPhysicalDevice_T.cpp" />
-    <ClCompile Include="..\src\pch.cpp" />
+    <ClCompile Include="..\src\pch\pch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vkt\include\glm\common.hpp" />
@@ -76,15 +76,19 @@
     <ClInclude Include="..\..\vkt\include\vkh\helpers.hpp" />
     <ClInclude Include="..\..\vkt\include\vkh\structures.hpp" />
     <ClInclude Include="..\..\vkt\include\vkt3\core.hpp" />
+    <ClInclude Include="..\..\vkt\include\xvk\xvk.hpp" />
+    <ClInclude Include="..\..\vkt\include\xvk\xvkBase.hpp" />
+    <ClInclude Include="..\..\vkt\include\xvk\xvkInterface.h" />
+    <ClInclude Include="..\..\vkt\include\xvk\xvkInterface.hpp" />
     <ClInclude Include="..\include\dxv\DXVulkan.hpp" />
-    <ClInclude Include="..\src\framework.h" />
-    <ClInclude Include="..\src\generals\objects.hpp" />
     <ClInclude Include="..\src\objects\VkDescriptorSetLayout_T.hpp" />
     <ClInclude Include="..\src\objects\VkDescriptorSet_T.hpp" />
     <ClInclude Include="..\src\objects\VkDevice_T.hpp" />
     <ClInclude Include="..\src\objects\VkInstance_T.hpp" />
     <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp" />
-    <ClInclude Include="..\src\pch.h" />
+    <ClInclude Include="..\src\pch\framework.h" />
+    <ClInclude Include="..\src\pch\objects.hpp" />
+    <ClInclude Include="..\src\pch\pch.h" />
     <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_icd.h" />
     <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_layer.h" />
     <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_platform.h" />
@@ -217,7 +221,7 @@
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch/pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableModules>true</EnableModules>
     </ClCompile>
@@ -237,7 +241,7 @@
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>pch/pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableModules>true</EnableModules>
     </ClCompile>

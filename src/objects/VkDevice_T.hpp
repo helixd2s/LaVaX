@@ -1,13 +1,16 @@
 #pragma once
 
-#include "generals/objects.hpp"
+// 
+#include "pch/objects.hpp"
 
 // 
 namespace dxv {
     class VkDevice_T {
     protected:
-        VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
         ComPtr<ID3D12Device> device = {};
+        VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+        std::vector<const char*> enabledExtensions = {};
+        std::vector<const char*> enabledLayers = {};
 
     public:
         VkDevice_T() {}
