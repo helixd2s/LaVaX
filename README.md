@@ -1,5 +1,7 @@
 # DXV
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 
 <img src="https://cdn.wccftech.com/wp-content/uploads/2015/03/Vulkan-API-31.jpg" width="400" alt="DXVulkan"/>
