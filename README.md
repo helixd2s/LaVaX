@@ -9,10 +9,10 @@ Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 ### Tech Spec
 
 ```
-- Architecture    : [VUL:A2021]
+- Architecture    : [DXV:A2021]
 - Portfolio       : Work in Progress
-- License         : Apache-2.0 (Currently), EULA (TODO)
 - Execute Day     : [2021:Q1]
+- License         : Apache-2.0 (Currently), EULA (TODO)
 - Support OS      : Windows 10 (build 2004 or newer), UWP
 - Support HW      : RTX 2070 or familiar...
 - Commercial      : WIP, Partial
