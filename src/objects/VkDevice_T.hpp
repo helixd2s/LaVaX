@@ -5,7 +5,7 @@
 
 // 
 namespace dxv {
-	class VkDevice_T { 
+	class VkDevice_T {
 	protected:
 		VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
 		ComPtr<ID3D12Device> device = {};

@@ -34,6 +34,9 @@
     <Filter Include="Header Files\dxv">
       <UniqueIdentifier>{02f13bc1-618f-4895-a4bd-17d393cef236}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\misc">
+      <UniqueIdentifier>{7bd2bad5-796a-4d42-89de-d5fff81564e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\objects\VkDevice_T.cpp">
@@ -244,6 +247,42 @@
     </ClInclude>
     <ClInclude Include="..\src\objects\VkDescriptorSetLayout_T.hpp">
       <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\args.hxx">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\catch.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\half.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\json.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\pcg_extras.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\pcg_random.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\pcg_uint128.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\soa_vector.hpp">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\stb_image.h">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\stb_image_write.h">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\tiny_gltf.h">
+      <Filter>Header Files\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\misc\tinyexr.h">
+      <Filter>Header Files\misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

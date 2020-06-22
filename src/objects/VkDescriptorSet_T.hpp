@@ -6,10 +6,10 @@
 // 
 namespace dxv {
 
-    class VkDescriptorSet_T {
+	class VkDescriptorSet_T {
 	protected:
 		ComPtr<ID3D12DescriptorHeap> heap = {};
-		std::vector<uint32_t> offsets = {};
+		std::vector<uintptr_t> offsets = {};
 		size_t fullRange = 0u;
 	public:
 		VkDescriptorSet_T() {}

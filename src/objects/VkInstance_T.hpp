@@ -5,7 +5,7 @@
 
 // 
 namespace dxv {
-	class VkInstance_T { 
+	class VkInstance_T {
 	protected:
 		std::vector<VkPhysicalDevice> devices = {};
 		ComPtr<IDXGIFactory4> factory = {};

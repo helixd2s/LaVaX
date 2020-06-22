@@ -19,7 +19,7 @@ namespace dxv {
         }
 
         // 
-        this->rootParameters.InitAsDescriptorTable(this->ranges.size(), this->ranges.data(), visibility);
+        this->rootParameters.InitAsDescriptorTable(UINT(this->ranges.size()), this->ranges.data(), visibility);
 
     };
 

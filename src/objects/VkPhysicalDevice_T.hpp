@@ -5,7 +5,7 @@
 
 // 
 namespace dxv {
-	class VkPhysicalDevice_T { 
+	class VkPhysicalDevice_T {
 	protected:
 		ComPtr<IDXGIAdapter1> adapter = {};
 		VkInstance instance = VK_NULL_HANDLE;

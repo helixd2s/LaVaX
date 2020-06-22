@@ -44,7 +44,7 @@ namespace dxv {
         };
 
         if (pPhysicalDeviceCount) {
-            *pPhysicalDeviceCount = this->devices.size();
+            *pPhysicalDeviceCount = uint32_t(this->devices.size());
         };
 
         if (pPhysicalDevices) {
