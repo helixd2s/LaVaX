@@ -41,6 +41,8 @@
 .vs/
 .vs/*
 .vs
+
+# Visual Studio Artifacts
 build/*/.vs/*
 build/*/.vs/
 build/*/.vs
