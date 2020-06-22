@@ -67,6 +67,14 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "forward_list": "cpp",
+        "fstream": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "cfenv": "cpp",
+        "cinttypes": "cpp",
+        "clocale": "cpp",
+        "numeric": "cpp"
     }
 }
