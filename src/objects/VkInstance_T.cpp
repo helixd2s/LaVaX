@@ -5,7 +5,7 @@
 namespace dxv {
 
     // 
-    VkInstance_T::VkInstance_T(HPTR(VkInstanceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) pAllocator)
+    VkResult VkInstance_T::Create(HPTR(VkInstanceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) pAllocator)
     {
         UINT dxgiFactoryFlags = 0;
 
@@ -25,6 +25,7 @@ namespace dxv {
 #endif
 
         ThrowIfFailed(CreateDXGIFactory2(dxgiFactoryFlags, IID_PPV_ARGS(&this->factory))); // TODO: VkResult Conversion
+        return VK_SUCCESS; // TODO: Corrent Result
     };
 
     // 

@@ -12,15 +12,19 @@ namespace dxv {
         std::vector<CD3DX12_DESCRIPTOR_RANGE1> ranges = {};
         std::vector<uintptr_t> offsets = {};
         size_t fullRange = 0u;
+        VkResult result = VK_SUCCESS;
 
     public:
         VkDescriptorSetLayout_T() {}
-        VkDescriptorSetLayout_T(const dxv::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkDescriptorSetLayout_T(const dxv::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+            this->result = this->Create(device, createInfo, callbacks);
+        };
 
         // 
-        size_t getDescriptorCount() const { return this->ranges.size(); }
-        const size_t& getFullRange() const { return this->fullRange; };
-        const std::vector<uintptr_t>& getOffsets() const { return this->offsets; };
+        VkResult Create(const dxv::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        size_t GetDescriptorCount() const { return this->ranges.size(); }
+        const size_t& GetFullRange() const { return this->fullRange; };
+        const std::vector<uintptr_t>& GetOffsets() const { return this->offsets; };
     };
 
 };

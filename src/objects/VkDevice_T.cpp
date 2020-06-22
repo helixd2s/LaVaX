@@ -4,7 +4,7 @@
 
 namespace dxv {
 
-    VkDevice_T::VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks)
+    VkResult VkDevice_T::Create(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks)
     {   // TODO: Measure Feature Level By Extensions
         if (!SUCCEEDED(D3D12CreateDevice( // Normal Mode
             physicalDevice->Get(),
@@ -19,8 +19,10 @@ namespace dxv {
             std::cerr << "Enabled DirectX 12 Compatibility Mode" << std::endl;
         } else {
             std::cout << "Enabled DirectX 12 Normal Mode" << std::endl;
-        }
+        };
+
         // TODO: VkResult Conversion
+        return VK_SUCCESS;
     };
 
 };

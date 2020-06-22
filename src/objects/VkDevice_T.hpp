@@ -9,6 +9,7 @@ namespace dxv {
     protected:
         ComPtr<ID3D12Device> device = {};
         VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+        VkResult result = VK_SUCCESS;
         std::vector<const char*> enabledExtensions = {};
         std::vector<const char*> enabledLayers = {};
 
@@ -55,10 +56,13 @@ namespace dxv {
             "VK_KHR_ray_tracing"
         };
 
-
     public:
         VkDevice_T() {}
-        VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
-        ComPtr<ID3D12Device> getDevice() const { return this->device; }
+        VkDevice_T(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+            this->result = this->Create(physicalDevice, createInfo, callbacks);
+        };
+        
+        ComPtr<ID3D12Device> GetDevice() const { return this->device; }
+        VkResult Create(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
     };
 };

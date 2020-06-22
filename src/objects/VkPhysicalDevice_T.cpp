@@ -4,8 +4,6 @@
 
 namespace dxv {
 
-    VkPhysicalDevice_T::VkPhysicalDevice_T(const dxv::VkInstance_T* instance, ComPtr<IDXGIAdapter1> adapter) : adapter(adapter) {
-
-    };
+    VkPhysicalDevice_T::VkPhysicalDevice_T(const dxv::VkInstance_T* instance, ComPtr<IDXGIAdapter1> adapter) : instance(VkInstance(instance)), adapter(adapter) {};
 
 };
