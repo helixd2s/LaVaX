@@ -8,8 +8,17 @@ namespace dxv {
 
     // TODO: VkRenderPassCreateInfo2 based object
     class VkRenderPass_T {
-    protected:
-        VkRenderPassCreateInfo createInfo = {}; // TODO: Cache Create Info with All Pointers
+    protected: friend VkFramebuffer_T;
+        // Imported From VKH helpers
+        VkRenderPassCreateInfo createInfo = {};
+        std::vector<VkAttachmentDescription> attachments = {};
+        std::vector<VkSubpassDescription> subpasses = {};
+        std::vector<VkSubpassDependency> dependencies = {};
+        std::vector<std::vector<VkAttachmentReference>> color_attachments = {};
+        std::vector<std::vector<VkAttachmentReference>> input_attachments = {};
+        std::vector<VkAttachmentReference> depth_stencil_attachment {};
+
+        // 
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
 

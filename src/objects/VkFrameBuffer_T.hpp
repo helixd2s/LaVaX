@@ -6,6 +6,11 @@
 // 
 namespace dxv {
 
+    class VkSubpass_T { public: 
+        std::vector<D3D12_CPU_DESCRIPTOR_HANDLE> colorAttachments = {};
+        D3D12_CPU_DESCRIPTOR_HANDLE depthStencilAttachment = {};
+    };
+
     class VkFramebuffer_T {
     protected:
         ComPtr<ID3D12DescriptorHeap> heap = {};
@@ -14,8 +19,7 @@ namespace dxv {
         VkResult result = VK_SUCCESS;
 
         // When RenderPass used
-        std::vector<D3D12_CPU_DESCRIPTOR_HANDLE> colorAttachments = {};
-        D3D12_CPU_DESCRIPTOR_HANDLE depthStencilAttachment = {};
+        std::vector<VkSubpass_T> subpasses = {};
         
     public:
         VkFramebuffer_T() {}

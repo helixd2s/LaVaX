@@ -25,6 +25,8 @@ namespace dxv {
     class VkImage_T;
     class VkImageView_T;
     class VkDeviceMemory_T;
+    class VkRenderPass_T;
+    class VkFramebuffer_T;
 
     // Final Fight
     D3D12_SRV_DIMENSION convertDimension(const VkImageViewType& type) {
