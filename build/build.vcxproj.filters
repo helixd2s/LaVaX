@@ -75,6 +75,36 @@
     <ClCompile Include="..\src\pch\pch.cpp">
       <Filter>Source Files\pch</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\objects\VkBuffer_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkBufferView_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkCommandBuffer_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkDeviceMemory_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkFramebuffer_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkImage_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkImageView_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkRenderPass_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkCommandPool_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\objects\VkQueue_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\objects\VkDevice_T.hpp">
@@ -298,6 +328,39 @@
     </ClInclude>
     <ClInclude Include="..\src\pch\objects.hpp">
       <Filter>Source Files\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkBuffer_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkBufferView_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkCommandBuffer_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkDeviceMemory_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkFramebuffer_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkImage_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkImageView_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkRenderPass_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkCommandPool_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkQueue_T.hpp">
+      <Filter>Source Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vkt\include\vkh\matching.hpp">
+      <Filter>Header Files\vkh</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
