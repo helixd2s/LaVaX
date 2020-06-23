@@ -122,6 +122,21 @@ namespace dxv {
 
         // Not Detected... 
         return DXGI_FORMAT_UNKNOWN;
-    }
+    };
+
+    D3D12_DESCRIPTOR_RANGE_TYPE convertDescriptorType(const VkDescriptorType& type) {
+        switch (type) {
+            case VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK_EXT: return D3D12_DESCRIPTOR_RANGE_TYPE_CBV; break;
+            case VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER: return D3D12_DESCRIPTOR_RANGE_TYPE_CBV; break;
+            case VK_DESCRIPTOR_TYPE_STORAGE_BUFFER: return D3D12_DESCRIPTOR_RANGE_TYPE_UAV; break;
+            case VK_DESCRIPTOR_TYPE_SAMPLER: return D3D12_DESCRIPTOR_RANGE_TYPE_SAMPLER; break;
+            case VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER: return D3D12_DESCRIPTOR_RANGE_TYPE_SRV; break;
+            case VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER: return D3D12_DESCRIPTOR_RANGE_TYPE_SRV; break;
+            case VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE: return D3D12_DESCRIPTOR_RANGE_TYPE_SRV; break;
+            case VK_DESCRIPTOR_TYPE_STORAGE_IMAGE: return D3D12_DESCRIPTOR_RANGE_TYPE_UAV; break;
+            case VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER: return D3D12_DESCRIPTOR_RANGE_TYPE_UAV; break;
+        };
+        return D3D12_DESCRIPTOR_RANGE_TYPE_SAMPLER;
+    };
     
 };

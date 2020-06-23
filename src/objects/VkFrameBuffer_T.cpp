@@ -40,11 +40,11 @@ namespace dxv {
             auto subpass = renderPass->subpasses[i];
             this->subpasses.push_back(VkSubpass_T{});
             for (uint32_t i=0;i<subpass.colorAttachmentCount;i++) {
-                auto attachment = subpass.pColorAttachments[i];
+                auto& attachment = subpass.pColorAttachments[i];
                 this->subpasses.back().colorAttachments.push_back(CD3DX12_CPU_DESCRIPTOR_HANDLE(this->heap->GetCPUDescriptorHandleForHeapStart(), attachment.attachment, device->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV)));
             };
             if (subpass.pDepthStencilAttachment) {
-                auto attachment = subpass.pDepthStencilAttachment[0];
+                auto& attachment = subpass.pDepthStencilAttachment[0];
                 this->subpasses.back().depthStencilAttachment = CD3DX12_CPU_DESCRIPTOR_HANDLE(this->heap->GetCPUDescriptorHandleForHeapStart(), attachment.attachment, device->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV));
             };
         };

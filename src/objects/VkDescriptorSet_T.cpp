@@ -5,6 +5,7 @@
 
 namespace dxv {
 
+    // Bindable ONLY FOR ONE Descriptor Set Layout
     VkResult VkDescriptorSet_T::Create(const dxv::VkDevice_T* device, const dxv::VkDescriptorPool_T* descriptorPool, const dxv::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
         // TODO: Extended Types, Per Every Range Heaps
         D3D12_DESCRIPTOR_HEAP_DESC srvHeapDesc = {};
