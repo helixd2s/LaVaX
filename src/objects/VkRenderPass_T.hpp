@@ -21,7 +21,7 @@ namespace dxv {
 
         // 
         VkResult Create(const dxv::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
-
+        const VkRenderPassCreateInfo& GetCreateInfo() { return createInfo; };
     };
 
 };
