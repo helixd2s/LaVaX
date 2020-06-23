@@ -8,10 +8,11 @@ namespace dxv {
 
     class VkFramebuffer_T {
     protected:
+        ComPtr<ID3D12DescriptorHeap> heap = {};
         VkFramebufferCreateInfo createInfo = {};
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
-        
+
         // When RenderPass used
         std::vector<D3D12_CPU_DESCRIPTOR_HANDLE> colorAttachments = {};
         D3D12_CPU_DESCRIPTOR_HANDLE depthStencilAttachment = {};
@@ -25,6 +26,8 @@ namespace dxv {
         // 
         VkResult Create(const dxv::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
 
+        // 
+        ID3D12DescriptorHeap* Get() const { return heap.Get(); };
     };
 
 };

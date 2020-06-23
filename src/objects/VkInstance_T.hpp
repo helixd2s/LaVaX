@@ -21,5 +21,8 @@ namespace dxv {
         // 
         VkResult Create(HPTR(VkInstanceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) pAllocator);
         VkResult EnumeratePhysicalDevices(uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices);
+
+        // 
+        IDXGIFactory4* Get() const { return factory.Get(); };
     };
 };

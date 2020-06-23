@@ -21,6 +21,9 @@ namespace dxv {
         };
 
         VkResult Create(const dxv::VkDevice_T* device, const dxv::VkDescriptorPool_T* descriptorPool, const dxv::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks);
+
+        // 
+        ID3D12DescriptorHeap* Get() const { return heap.Get(); };
     };
 
 };

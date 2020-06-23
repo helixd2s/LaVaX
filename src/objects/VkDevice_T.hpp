@@ -62,7 +62,11 @@ namespace dxv {
             this->result = this->Create(physicalDevice, createInfo, callbacks);
         };
         
+        // 
         ComPtr<ID3D12Device> GetDevice() const { return this->device; }
         VkResult Create(const dxv::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+
+        // 
+        ID3D12Device* Get() const { return device.Get(); };
     };
 };

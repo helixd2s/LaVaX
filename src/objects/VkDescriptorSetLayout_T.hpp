@@ -25,6 +25,8 @@ namespace dxv {
         size_t GetDescriptorCount() const { return this->ranges.size(); }
         const size_t& GetFullRange() const { return this->fullRange; };
         const std::vector<uintptr_t>& GetOffsets() const { return this->offsets; };
+
+        
     };
 
 };
