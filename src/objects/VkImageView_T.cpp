@@ -58,7 +58,7 @@ namespace dxv {
             srvDesc.Texture1DArray.MostDetailedMip = createInfo->subresourceRange.baseMipLevel;
             srvDesc.Texture1DArray.FirstArraySlice = createInfo->subresourceRange.baseArrayLayer;
         };
-        
+
         // 
         if (srvDesc.ViewDimension == D3D12_SRV_DIMENSION_TEXTURE2DARRAY) {
             srvDesc.Texture2DArray.MipLevels = createInfo->subresourceRange.levelCount;

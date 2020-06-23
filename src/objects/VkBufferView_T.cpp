@@ -24,10 +24,18 @@ namespace dxv {
         srvDesc.Format = convertFormat(createInfo->format);
         srvDesc.ViewDimension = D3D12_SRV_DIMENSION_BUFFER;
 
-        // TODO: Correct StructureByteStride
+        // TODO: Correct StructureByteStride (Vanilla Vulkan API)
         srvDesc.Buffer.FirstElement = createInfo->offset;
         srvDesc.Buffer.NumElements = createInfo->range;
         srvDesc.Buffer.StructureByteStride = 1u;
+
+        // TODO: Remove Vulkan-HPP Requirements
+#ifdef VULKAN_HPP // When Vulkan-HPP Available, use Vookoo imported block params
+        auto blockParam = vkh::getBlockParams(vk::Format(createInfo->format));
+        srvDesc.Buffer.FirstElement = createInfo->offset / blockParam.bytesPerBlock;
+        srvDesc.Buffer.NumElements = createInfo->range / blockParam.bytesPerBlock;
+        srvDesc.Buffer.StructureByteStride = blockParam.bytesPerBlock;
+#endif
 
         // TODO: Return Result 
         device->GetDevice()->CreateShaderResourceView(reinterpret_cast<VkBuffer_T*>(createInfo->buffer)->GetResource().Get(), &srvDesc, this->heap->GetCPUDescriptorHandleForHeapStart());

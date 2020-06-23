@@ -9,7 +9,7 @@ namespace dxv {
     // TODO: VkRenderPassCreateInfo2 based object
     class VkRenderPass_T {
     protected:
-        VkRenderPassCreateInfo createInfo = {};
+        VkRenderPassCreateInfo createInfo = {}; // TODO: Cache Create Info with All Pointers
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
 

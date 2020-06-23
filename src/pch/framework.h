@@ -8,6 +8,7 @@
 #include <vkh/bitfields.hpp>
 #include <vkh/enums.hpp>
 #include <vkh/structures.hpp>
+#include <vkh/matching.hpp>
 #include <vector>
 #include <memory>
 

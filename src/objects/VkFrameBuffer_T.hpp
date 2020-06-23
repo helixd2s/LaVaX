@@ -9,7 +9,7 @@ namespace dxv {
     class VkFramebuffer_T {
     protected:
         ComPtr<ID3D12DescriptorHeap> heap = {};
-        VkFramebufferCreateInfo createInfo = {};
+        VkFramebufferCreateInfo createInfo = {}; // TODO: Cache Create Info with All Pointers
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
 
