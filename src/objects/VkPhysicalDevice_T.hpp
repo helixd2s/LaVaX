@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dxv {
+namespace dvx {
     class VkPhysicalDevice_T {
     protected:
         ComPtr<IDXGIAdapter1> adapter = {};
@@ -12,7 +12,7 @@ namespace dxv {
 
     public:
         VkPhysicalDevice_T() {};
-        VkPhysicalDevice_T(const dxv::VkInstance_T* instance, ComPtr<IDXGIAdapter1> adapter = {});
+        VkPhysicalDevice_T(const dvx::VkInstance_T* instance, ComPtr<IDXGIAdapter1> adapter = {});
 
         // 
         IDXGIAdapter1* Get() const { return this->adapter.Get(); };

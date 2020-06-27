@@ -2,7 +2,7 @@
 #include "VkInstance_T.hpp"
 #include "VkPhysicalDevice_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
     // 
     VkResult VkInstance_T::Create(HPTR(VkInstanceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) pAllocator)
@@ -40,7 +40,7 @@ namespace dxv {
 
                 // Look Only for D3D12 Devices
                 if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE || !SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_12_0, _uuidof(ID3D12Device), nullptr))) { continue; }
-                this->devices.push_back(VkPhysicalDevice(new dxv::VkPhysicalDevice_T(this, adapter)));
+                this->devices.push_back(VkPhysicalDevice(new dvx::VkPhysicalDevice_T(this, adapter)));
             };
         };
 

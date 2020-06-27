@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dxv {
+namespace dvx {
 
     // TODO: VkRenderPassCreateInfo2 based object
     class VkRenderPass_T {
@@ -24,12 +24,12 @@ namespace dxv {
 
     public:
         VkRenderPass_T() {}
-        VkRenderPass_T(const dxv::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkRenderPass_T(const dvx::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const dxv::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const dvx::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
         const VkRenderPassCreateInfo& GetCreateInfo() { return createInfo; };
     };
 

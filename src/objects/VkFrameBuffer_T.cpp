@@ -4,9 +4,9 @@
 #include "VkRenderPass_T.hpp"
 #include "VkImageView_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
-    VkResult VkFramebuffer_T::Create(const dxv::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+    VkResult VkFramebuffer_T::Create(const dvx::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
         this->createInfo = createInfo;
         this->device = VkDevice(device);
 

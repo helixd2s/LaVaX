@@ -1,4 +1,4 @@
-# DXV
+# DeViX
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -9,7 +9,7 @@ Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 ### Tech Spec
 
 ```
-- Architecture    : [DXV:A2021]
+- Architecture    : [DVX:A2021]
 - Portfolio       : Work in Progress
 - Execute Day     : [2021:Q1]
 - License         : Apache-2.0 (Currently), EULA (TODO)
@@ -26,5 +26,5 @@ Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 Date:[22.06.2020]:[helix.d@IMN]
 ```
 
-### [Overview](https://github.com/helixd2s/DXV-Overview)...
+### [Overview](https://github.com/helixd2s/DeViX-Overview)...
 

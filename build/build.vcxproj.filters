@@ -28,7 +28,7 @@
     <Filter Include="Header Files\vulkan">
       <UniqueIdentifier>{fafedca6-761c-44a6-995a-98dcd700d5d2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\dxv">
+    <Filter Include="Header Files\dvx">
       <UniqueIdentifier>{02f13bc1-618f-4895-a4bd-17d393cef236}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\misc">
@@ -203,8 +203,8 @@
     <ClInclude Include="..\..\vkt\include\glm\vector_relational.hpp">
       <Filter>Header Files\glm</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\dxv\DXVulkan.hpp">
-      <Filter>Header Files\dxv</Filter>
+    <ClInclude Include="..\include\dvx\DXVulkan.hpp">
+      <Filter>Header Files\dvx</Filter>
     </ClInclude>
     <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_icd.h">
       <Filter>Header Files\vulkan</Filter>

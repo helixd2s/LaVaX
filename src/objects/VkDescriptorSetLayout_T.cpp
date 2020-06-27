@@ -3,11 +3,11 @@
 
 
 
-namespace dxv {
+namespace dvx {
 
     
 
-    VkResult VkDescriptorSetLayout_T::Create(const dxv::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+    VkResult VkDescriptorSetLayout_T::Create(const dvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
         this->fullRange = 0u; D3D12_SHADER_VISIBILITY visibility = D3D12_SHADER_VISIBILITY_ALL;
 
         // TODO: Measure Visibility by OR Operation

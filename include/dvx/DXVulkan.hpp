@@ -13,7 +13,7 @@
 #define BUILD_API __declspec(dllexport)
 #endif
 
-namespace dxv {
+namespace dvx {
     BUILD_API VkResult vkCreateDevice(
         VkPhysicalDevice physicalDevice,
         const VkDeviceCreateInfo* pCreateInfo,

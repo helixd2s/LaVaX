@@ -3,9 +3,9 @@
 #include "VkBuffer_T.hpp"
 #include "VkBufferView_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
-    VkResult VkBufferView_T::Create(const dxv::VkDevice_T* device, HPTR(VkBufferViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+    VkResult VkBufferView_T::Create(const dvx::VkDevice_T* device, HPTR(VkBufferViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
         this->createInfo = createInfo;
         this->device = VkDevice(device);
 

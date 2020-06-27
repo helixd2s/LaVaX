@@ -2,10 +2,10 @@
 #include "VkDevice_T.hpp"
 #include "VkRenderPass_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
     // Do caching (alike RenderPass helper of VKH)
-    VkResult VkRenderPass_T::Create(const dxv::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) { 
+    VkResult VkRenderPass_T::Create(const dvx::VkDevice_T* device, HPTR(VkRenderPassCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) { 
         this->createInfo = createInfo;
         this->device = VkDevice(device);
 

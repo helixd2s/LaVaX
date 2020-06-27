@@ -3,10 +3,10 @@
 #include "VkDescriptorSet_T.hpp"
 #include "VkDescriptorSetLayout_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
     // Bindable ONLY FOR ONE Descriptor Set Layout
-    VkResult VkDescriptorSet_T::Create(const dxv::VkDevice_T* device, const dxv::VkDescriptorPool_T* descriptorPool, const dxv::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
+    VkResult VkDescriptorSet_T::Create(const dvx::VkDevice_T* device, const dvx::VkDescriptorPool_T* descriptorPool, const dvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
         // TODO: Extended Types, Per Every Range Heaps
         D3D12_DESCRIPTOR_HEAP_DESC srvHeapDesc = {};
         srvHeapDesc.NumDescriptors = UINT(descriptorSetLayout->GetFullRange());

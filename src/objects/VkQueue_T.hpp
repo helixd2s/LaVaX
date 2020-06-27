@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dxv {
+namespace dvx {
 
     class VkQueue_T {
     protected:
@@ -15,7 +15,7 @@ namespace dxv {
 
     public:
         VkQueue_T() {}
-        VkQueue_T(const dxv::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue);
+        VkQueue_T(const dvx::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue);
 
         // 
         ID3D12CommandQueue* Get() const { return commandQueue.Get(); };

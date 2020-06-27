@@ -3,9 +3,9 @@
 #include "VkImageView_T.hpp"
 #include "VkImage_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
-    VkResult VkImageView_T::Create(const dxv::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) 
+    VkResult VkImageView_T::Create(const dvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) 
     {
         // Needs to copy into main heaps (i.e. as DirectX 12 Version)
         D3D12_DESCRIPTOR_HEAP_DESC srvHeapDesc = {};
@@ -18,11 +18,11 @@ namespace dxv {
         return this->Create(device, *createInfo, *callbacks, this->heap->GetCPUDescriptorHandleForHeapStart());
     }
 
-    VkResult VkImageView_T::Create(const dxv::VkDevice_T* device, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle) {
+    VkResult VkImageView_T::Create(const dvx::VkDevice_T* device, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle) {
         return this->Create(device, this->createInfo, this->callbacks, Handle);
     };
 
-    VkResult VkImageView_T::Create(const dxv::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle) {
+    VkResult VkImageView_T::Create(const dvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle) {
         this->createInfo = createInfo;
         this->device = VkDevice(device);
         this->callbacks = const_cast<vkt::uni_arg<VkAllocationCallbacks>&>(callbacks);

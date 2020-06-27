@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dxv {
+namespace dvx {
 
     class VkSubpass_T { public: 
         std::vector<D3D12_CPU_DESCRIPTOR_HANDLE> colorAttachments = {};
@@ -23,12 +23,12 @@ namespace dxv {
         
     public:
         VkFramebuffer_T() {}
-        VkFramebuffer_T(const dxv::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkFramebuffer_T(const dvx::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const dxv::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const dvx::VkDevice_T* device, HPTR(VkFramebufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
 
         // 
         ID3D12DescriptorHeap* Get() const { return heap.Get(); };

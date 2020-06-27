@@ -1,4 +1,4 @@
-#include <dxv/DXVulkan.hpp>
+#include <dvx/DXVulkan.hpp>
 
 #include "pch/pch.h"
 #include "objects/VkInstance_T.hpp"
@@ -7,7 +7,7 @@
 #define BUILD_EXPORTS
 #endif
 
-namespace dxv {
+namespace dvx {
 
     // 
     BUILD_API VkResult vkCreateInstance(

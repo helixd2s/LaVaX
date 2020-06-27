@@ -2,9 +2,9 @@
 #include "VkDevice_T.hpp"
 #include "VkImage_T.hpp"
 
-namespace dxv {
+namespace dvx {
 
-    VkResult VkImage_T::Create(const dxv::VkDevice_T* device, HPTR(VkImageCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+    VkResult VkImage_T::Create(const dvx::VkDevice_T* device, HPTR(VkImageCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
         this->createInfo = createInfo;
         this->device = VkDevice(device);
 
