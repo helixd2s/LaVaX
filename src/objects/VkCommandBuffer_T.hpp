@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     class VkCommandBuffer_T {
     protected:
@@ -15,7 +15,7 @@ namespace dvx {
         
     public:
         VkCommandBuffer_T() {}
-        VkCommandBuffer_T(const dvx::VkDevice_T* device, ComPtr<ID3D12GraphicsCommandList> commandList = {});
+        VkCommandBuffer_T(const lvx::VkDevice_T* device, ComPtr<ID3D12GraphicsCommandList> commandList = {});
 
         // 
         ID3D12GraphicsCommandList* Get() const { return commandList.Get(); };

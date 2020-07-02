@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
     class VkDevice_T {
     protected:
         ComPtr<ID3D12Device> device = {};
@@ -58,13 +58,13 @@ namespace dvx {
 
     public:
         VkDevice_T() {}
-        VkDevice_T(const dvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkDevice_T(const lvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(physicalDevice, createInfo, callbacks);
         };
         
         // 
         ComPtr<ID3D12Device> GetDevice() const { return this->device; }
-        VkResult Create(const dvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
 
         // 
         ID3D12Device* Get() const { return device.Get(); };

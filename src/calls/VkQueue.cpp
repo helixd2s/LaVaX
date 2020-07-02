@@ -1,4 +1,4 @@
-#include <dvx/DXVulkan.hpp>
+#include <lvx/DXVulkan.hpp>
 
 #include "pch/pch.h"
 
@@ -6,7 +6,7 @@
 #define BUILD_EXPORTS
 #endif
 
-namespace dvx {
+namespace lvx {
 
 
 };

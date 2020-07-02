@@ -8,7 +8,7 @@
 #define UPTR(NAME) const vkt::uni_arg<NAME>&
 
 // 
-namespace dvx {
+namespace lvx {
     
     class VkInstance_T;
     class VkDevice_T;

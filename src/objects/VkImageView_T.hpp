@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     class VkImageView_T {
     protected:
@@ -16,14 +16,14 @@ namespace dvx {
 
     public:
         VkImageView_T() {}
-        VkImageView_T(const dvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkImageView_T(const lvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const dvx::VkDevice_T* device, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle);
-        VkResult Create(const dvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle);
-        VkResult Create(const dvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkDevice_T* device, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle);
+        VkResult Create(const lvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks, const D3D12_CPU_DESCRIPTOR_HANDLE& Handle);
+        VkResult Create(const lvx::VkDevice_T* device, HPTR(VkImageViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
 
         // 
         ComPtr<ID3D12DescriptorHeap>& Heap() { return this->heap; };

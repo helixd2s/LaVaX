@@ -1,4 +1,4 @@
-#include <dvx/DXVulkan.hpp>
+#include <lvx/DXVulkan.hpp>
 
 #include "pch/pch.h"
 #include "objects/VkDevice_T.hpp"
@@ -8,7 +8,7 @@
 #define BUILD_EXPORTS
 #endif
 
-namespace dvx {
+namespace lvx {
 
     // 
     BUILD_API VkResult vkCreateDevice(

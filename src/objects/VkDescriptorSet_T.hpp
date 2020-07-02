@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     // 
     class VkDescriptorSet_T {
@@ -16,11 +16,11 @@ namespace dvx {
 
     public:
         VkDescriptorSet_T() {}
-        VkDescriptorSet_T(const dvx::VkDevice_T* device, const dvx::VkDescriptorPool_T* descriptorPool, const dvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
+        VkDescriptorSet_T(const lvx::VkDevice_T* device, const lvx::VkDescriptorPool_T* descriptorPool, const lvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, descriptorPool, descriptorSetLayout, callbacks);
         };
 
-        VkResult Create(const dvx::VkDevice_T* device, const dvx::VkDescriptorPool_T* descriptorPool, const dvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkDevice_T* device, const lvx::VkDescriptorPool_T* descriptorPool, const lvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks);
 
         // 
         ID3D12DescriptorHeap* Get() const { return heap.Get(); };

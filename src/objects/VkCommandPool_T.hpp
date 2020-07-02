@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     // TODO: VkCommandPoolCreateInfo2 based object
     class VkCommandPool_T {
@@ -16,12 +16,12 @@ namespace dvx {
 
     public:
         VkCommandPool_T() {}
-        VkCommandPool_T(const dvx::VkDevice_T* device, HPTR(VkCommandPoolCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkCommandPool_T(const lvx::VkDevice_T* device, HPTR(VkCommandPoolCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const dvx::VkDevice_T* device, HPTR(VkCommandPoolCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkDevice_T* device, HPTR(VkCommandPoolCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
         const VkCommandPoolCreateInfo& GetCreateInfo() { return createInfo; };
 
         // 

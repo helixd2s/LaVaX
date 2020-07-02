@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     class VkDescriptorSetLayout_T {
     protected:
@@ -16,12 +16,12 @@ namespace dvx {
 
     public:
         VkDescriptorSetLayout_T() {}
-        VkDescriptorSetLayout_T(const dvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkDescriptorSetLayout_T(const lvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const dvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
         size_t GetDescriptorCount() const { return this->ranges.size(); }
         const size_t& GetFullRange() const { return this->fullRange; };
         const std::vector<uintptr_t>& GetOffsets() const { return this->offsets; };

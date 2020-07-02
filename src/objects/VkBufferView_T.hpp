@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     class VkBufferView_T {
     protected:
@@ -15,12 +15,12 @@ namespace dvx {
 
     public:
         VkBufferView_T() {}
-        VkBufferView_T(const dvx::VkDevice_T* device, HPTR(VkBufferViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkBufferView_T(const lvx::VkDevice_T* device, HPTR(VkBufferViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const dvx::VkDevice_T* device, HPTR(VkBufferViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkDevice_T* device, HPTR(VkBufferViewCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
 
         // 
         ComPtr<ID3D12DescriptorHeap>& Heap() { return this->heap; };

@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
     class VkInstance_T {
     protected:
         ComPtr<IDXGIFactory4> factory = {};

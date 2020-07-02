@@ -4,7 +4,7 @@
 #include "pch/objects.hpp"
 
 // 
-namespace dvx {
+namespace lvx {
 
     class VkDeviceMemory_T {
     protected:
@@ -16,7 +16,7 @@ namespace dvx {
         
     public:
         VkDeviceMemory_T() {}
-        VkDeviceMemory_T(const dvx::VkDevice_T* device, ComPtr<ID3D12Heap> memoryHeap = {});
+        VkDeviceMemory_T(const lvx::VkDevice_T* device, ComPtr<ID3D12Heap> memoryHeap = {});
 
         // 
         ID3D12Heap* Get() const { return memoryHeap.Get(); };

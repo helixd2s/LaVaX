@@ -2,9 +2,9 @@
 #include "VkDevice_T.hpp"
 #include "VkPhysicalDevice_T.hpp"
 
-namespace dvx {
+namespace lvx {
 
-    VkResult VkDevice_T::Create(const dvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks)
+    VkResult VkDevice_T::Create(const lvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks)
     {   // TODO: Measure Feature Level By Extensions
         if (!SUCCEEDED(D3D12CreateDevice( // Normal Mode
             physicalDevice->Get(),
