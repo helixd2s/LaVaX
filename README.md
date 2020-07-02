@@ -4,7 +4,7 @@
 
 Vulkan API wrapper of DirectX 12 Ultimate (but uses DXIL instead of SPIR-V)
 
-<img src="https://cdn.wccftech.com/wp-content/uploads/2015/03/Vulkan-API-31.jpg" width="400" alt="DXVulkan"/>
+<img src="https://cdn.wccftech.com/wp-content/uploads/2015/03/Vulkan-API-31.jpg" width="400" alt="LaVaXulkan"/>
 
 ### Tech Spec
 

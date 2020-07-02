@@ -203,7 +203,7 @@
     <ClInclude Include="..\..\vkt\include\glm\vector_relational.hpp">
       <Filter>Header Files\glm</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\lvx\DXVulkan.hpp">
+    <ClInclude Include="..\include\lvx\LaVaXulkan.hpp">
       <Filter>Header Files\lvx</Filter>
     </ClInclude>
     <ClInclude Include="H:\VulkanSDK\1.2.141.2\Include\vulkan\vk_icd.h">
