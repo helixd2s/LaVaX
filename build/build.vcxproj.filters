@@ -105,6 +105,9 @@
     <ClCompile Include="..\src\objects\VkQueue_T.cpp">
       <Filter>Source Files\objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\objects\VkPipelineLayout_T.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\objects\VkDevice_T.hpp">
@@ -361,6 +364,9 @@
     </ClInclude>
     <ClInclude Include="..\..\vkt\include\vkh\matching.hpp">
       <Filter>Header Files\vkh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objects\VkPipelineLayout_T.hpp">
+      <Filter>Source Files\objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

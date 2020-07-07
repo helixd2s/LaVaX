@@ -16,16 +16,17 @@ namespace lvx {
 
     public:
         VkDescriptorSetLayout_T() {}
-        VkDescriptorSetLayout_T(const lvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
+        VkDescriptorSetLayout_T(const lvx::VkDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {
             this->result = this->Create(device, createInfo, callbacks);
         };
 
         // 
-        VkResult Create(const lvx::VkPhysicalDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Create(const lvx::VkDevice_T* device, HPTR(VkDescriptorSetLayoutCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
         size_t GetDescriptorCount() const { return this->ranges.size(); }
         const size_t& GetFullRange() const { return this->fullRange; };
         const std::vector<uintptr_t>& GetOffsets() const { return this->offsets; };
-
+        CD3DX12_ROOT_PARAMETER1& GetRootParameters() { return rootParameters; };
+        const CD3DX12_ROOT_PARAMETER1& GetRootParameters() const { return rootParameters; };
         
     };
 

@@ -40,6 +40,7 @@
     <ClCompile Include="..\src\objects\VkImage_T.cpp" />
     <ClCompile Include="..\src\objects\VkInstance_T.cpp" />
     <ClCompile Include="..\src\objects\VkPhysicalDevice_T.cpp" />
+    <ClCompile Include="..\src\objects\VkPipelineLayout_T.cpp" />
     <ClCompile Include="..\src\objects\VkQueue_T.cpp" />
     <ClCompile Include="..\src\objects\VkRenderPass_T.cpp" />
     <ClCompile Include="..\src\pch\pch.cpp" />
@@ -105,6 +106,7 @@
     <ClInclude Include="..\src\objects\VkImage_T.hpp" />
     <ClInclude Include="..\src\objects\VkInstance_T.hpp" />
     <ClInclude Include="..\src\objects\VkPhysicalDevice_T.hpp" />
+    <ClInclude Include="..\src\objects\VkPipelineLayout_T.hpp" />
     <ClInclude Include="..\src\objects\VkQueue_T.hpp" />
     <ClInclude Include="..\src\objects\VkRenderPass_T.hpp" />
     <ClInclude Include="..\src\pch\framework.h" />
