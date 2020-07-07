@@ -14,6 +14,7 @@ namespace lvx {
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
         D3D12_RESOURCE_DESC bufferDesc = {};
+        D3D12_RESOURCE_STATES state = {}; // i.e. VkAccessFlags
 
     public:
         VkBuffer_T() {}

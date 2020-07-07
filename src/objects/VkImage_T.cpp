@@ -27,10 +27,10 @@ namespace lvx {
         textureDesc.SampleDesc.Count = 1;
         textureDesc.SampleDesc.Quality = 0;
 
+        // 
+        ThrowIfFailed(device->GetDevice()->CreateCommittedResource(&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT), D3D12_HEAP_FLAG_NONE, &textureDesc, getResourceState(createInfo->initialLayout), nullptr, IID_PPV_ARGS(&resource)));
 
-        ThrowIfFailed(device->GetDevice()->CreateCommittedResource(&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT), D3D12_HEAP_FLAG_NONE, &textureDesc, D3D12_RESOURCE_STATE_COPY_DEST, nullptr, IID_PPV_ARGS(&resource)));
-
-
+        // 
         return VK_SUCCESS;
     };
 
