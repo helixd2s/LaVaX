@@ -214,18 +214,18 @@ void ResetUniquePtrArray(T* uniquePtrArray)
 //
 //
 
-// 
+// Imported from rostkatze
 inline static const auto VK_FORMAT_RANGE_SIZE = (VK_FORMAT_ASTC_12x12_SRGB_BLOCK - VK_FORMAT_UNDEFINED + 1);
 
-// 
+// TODO: Unify format blocks with Vookoo imported
 struct format_block_t {
     uint8_t width;
     uint8_t height;
     uint16_t bits;
 };
 
-
 // TODO
+// Imported from rostkatze
 static inline const std::array<DXGI_FORMAT, VK_FORMAT_RANGE_SIZE> formats{
     DXGI_FORMAT_UNKNOWN, // UNDEFINED
     DXGI_FORMAT_UNKNOWN, // R4G4_UNORM_PACK8
@@ -414,6 +414,7 @@ static inline const std::array<DXGI_FORMAT, VK_FORMAT_RANGE_SIZE> formats{
     DXGI_FORMAT_UNKNOWN, // ASTC_12x12_SRGB_BLOCK
 };
 
+// Imported from rostkatze
 static inline const std::array<format_block_t, VK_FORMAT_RANGE_SIZE> formats_block{ {
     { 0, 0, 0 }, // UNDEFINED
     { }, // R4G4_UNORM_PACK8
@@ -602,6 +603,7 @@ static inline const std::array<format_block_t, VK_FORMAT_RANGE_SIZE> formats_blo
     { }, // ASTC_12x12_SRGB_BLOCK
 } };
 
+// Imported from rostkatze
 // TODO: mirroring required format support by vulkan but not what d3d12 actually supports..
 static inline const std::array<VkFormatProperties, VK_FORMAT_RANGE_SIZE> formats_property{ {
     { 0, 0, 0 }, // UNDEFINED
@@ -1025,19 +1027,19 @@ static inline const std::array<VkFormatProperties, VK_FORMAT_RANGE_SIZE> formats
 // WIP! NOT All Complete! 
 inline D3D12_RESOURCE_STATES getResourceState(const VkImageLayout& layout){
     switch(layout) {
-        case VK_IMAGE_LAYOUT_UNDEFINED: return D3D12_RESOURCE_STATE_COMMON;
-        case VK_IMAGE_LAYOUT_GENERAL: return D3D12_RESOURCE_STATE_COMMON;
-        case VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL: return D3D12_RESOURCE_STATE_RENDER_TARGET;
-        case VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_WRITE;
-        case VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_READ;
-        case VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_WRITE;
-        case VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_READ;
-        case VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL: return D3D12_RESOURCE_STATE_GENERIC_READ;
-        case VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL: return D3D12_RESOURCE_STATE_COPY_SOURCE;
-        case VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL: return D3D12_RESOURCE_STATE_COPY_DEST;
-        case VK_IMAGE_LAYOUT_PRESENT_SRC_KHR: return D3D12_RESOURCE_STATE_PRESENT;
-        case VK_IMAGE_LAYOUT_PREINITIALIZED: return D3D12_RESOURCE_STATE_PREDICATION;
-        default:;
+        case VK_IMAGE_LAYOUT_UNDEFINED: return D3D12_RESOURCE_STATE_COMMON; break;
+        case VK_IMAGE_LAYOUT_GENERAL: return D3D12_RESOURCE_STATE_COMMON; break;
+        case VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL: return D3D12_RESOURCE_STATE_RENDER_TARGET; break;
+        case VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_WRITE; break;
+        case VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_READ; break;
+        case VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_WRITE; break;
+        case VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_OPTIMAL: return D3D12_RESOURCE_STATE_DEPTH_READ; break;
+        case VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL: return D3D12_RESOURCE_STATE_GENERIC_READ; break;
+        case VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL: return D3D12_RESOURCE_STATE_COPY_SOURCE; break;
+        case VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL: return D3D12_RESOURCE_STATE_COPY_DEST; break;
+        case VK_IMAGE_LAYOUT_PRESENT_SRC_KHR: return D3D12_RESOURCE_STATE_PRESENT; break;
+        case VK_IMAGE_LAYOUT_PREINITIALIZED: return D3D12_RESOURCE_STATE_PREDICATION; break;
+        default: return D3D12_RESOURCE_STATE_COMMON;
     };
     return D3D12_RESOURCE_STATE_COMMON;
 };
@@ -1062,4 +1064,20 @@ inline D3D12_RESOURCE_STATES getResourceState(const vkh::VkAccessFlags& accessMa
     if (accessMask.eColorAttachmentWrite) { return D3D12_RESOURCE_STATE_RENDER_TARGET; };
     if (accessMask.eIndexRead) { return D3D12_RESOURCE_STATE_INDEX_BUFFER; };
     return D3D12_RESOURCE_STATE_COMMON;
+};
+
+// Imported from rostkatze
+inline D3D12_COMPARISON_FUNC getCompareOp(const VkCompareOp& op) {
+    switch(op) {
+        case VK_COMPARE_OP_NEVER: return D3D12_COMPARISON_FUNC_NEVER; break;
+        case VK_COMPARE_OP_LESS: return D3D12_COMPARISON_FUNC_LESS; break;
+        case VK_COMPARE_OP_EQUAL: return D3D12_COMPARISON_FUNC_EQUAL; break;
+        case VK_COMPARE_OP_LESS_OR_EQUAL: return D3D12_COMPARISON_FUNC_LESS_EQUAL; break;
+        case VK_COMPARE_OP_GREATER: return D3D12_COMPARISON_FUNC_GREATER; break;
+        case VK_COMPARE_OP_NOT_EQUAL: return D3D12_COMPARISON_FUNC_NOT_EQUAL; break;
+        case VK_COMPARE_OP_GREATER_OR_EQUAL: return D3D12_COMPARISON_FUNC_GREATER_EQUAL; break;
+        case VK_COMPARE_OP_ALWAYS: return D3D12_COMPARISON_FUNC_ALWAYS; break;
+        default: return D3D12_COMPARISON_FUNC_ALWAYS;
+    };
+    return D3D12_COMPARISON_FUNC_ALWAYS;
 };
