@@ -9,6 +9,7 @@ namespace lvx {
     class VkBuffer_T {
     protected:
         ComPtr<ID3D12Resource> resource = {};
+        ComPtr<ID3D12Heap> memory = {}; // Used for copy from buffer to image
         VkBufferCreateInfo createInfo = {};
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
