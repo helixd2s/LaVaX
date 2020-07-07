@@ -1067,7 +1067,7 @@ inline D3D12_RESOURCE_STATES getResourceState(const vkh::VkAccessFlags& accessMa
 };
 
 // Imported from rostkatze
-inline D3D12_COMPARISON_FUNC getCompareOp(const VkCompareOp& op) {
+inline static D3D12_COMPARISON_FUNC getCompareOp(const VkCompareOp& op) {
     switch(op) {
         case VK_COMPARE_OP_NEVER: return D3D12_COMPARISON_FUNC_NEVER; break;
         case VK_COMPARE_OP_LESS: return D3D12_COMPARISON_FUNC_LESS; break;
@@ -1080,4 +1080,19 @@ inline D3D12_COMPARISON_FUNC getCompareOp(const VkCompareOp& op) {
         default: return D3D12_COMPARISON_FUNC_ALWAYS;
     };
     return D3D12_COMPARISON_FUNC_ALWAYS;
+};
+
+// Imported from rostkatze
+inline static auto component = [] (const VkComponentSwizzle& component, const D3D12_SHADER_COMPONENT_MAPPING& identity) {
+    switch (component) {
+        case VK_COMPONENT_SWIZZLE_IDENTITY: return identity;
+        case VK_COMPONENT_SWIZZLE_ZERO: return D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_0;
+        case VK_COMPONENT_SWIZZLE_ONE: return D3D12_SHADER_COMPONENT_MAPPING_FORCE_VALUE_1;
+        case VK_COMPONENT_SWIZZLE_R: return D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0;
+        case VK_COMPONENT_SWIZZLE_G: return D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_1;
+        case VK_COMPONENT_SWIZZLE_B: return D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_2;
+        case VK_COMPONENT_SWIZZLE_A: return D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_3;
+        default: return identity;
+    };
+    return identity;
 };

@@ -29,7 +29,6 @@ namespace lvx {
 
         // Describe and create a SRV for the texture.
         D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
-        srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING; // TODO: Component Mapping
         srvDesc.Format = convertFormat(createInfo->format);
         srvDesc.ViewDimension = convertDimension(createInfo->viewType);
 
@@ -72,6 +71,15 @@ namespace lvx {
             srvDesc.TextureCube.MipLevels = createInfo->subresourceRange.levelCount;
             srvDesc.TextureCube.MostDetailedMip = createInfo->subresourceRange.baseMipLevel;
         };
+
+        // 
+        srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+        srvDesc.Shader4ComponentMapping = D3D12_ENCODE_SHADER_4_COMPONENT_MAPPING(
+            component(createInfo->components.r, D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_0),
+            component(createInfo->components.g, D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_1),
+            component(createInfo->components.b, D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_2),
+            component(createInfo->components.a, D3D12_SHADER_COMPONENT_MAPPING_FROM_MEMORY_COMPONENT_3)
+        );
 
         // 
         device->GetDevice()->CreateShaderResourceView(reinterpret_cast<VkImage_T*>(createInfo->image)->GetResource().Get(), &srvDesc, Handle);
