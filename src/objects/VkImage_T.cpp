@@ -9,6 +9,25 @@ namespace lvx {
         this->device = VkDevice(device);
 
 
+        // Describe and create a Texture2D.
+        D3D12_RESOURCE_DESC textureDesc = {};
+        textureDesc.MipLevels = createInfo->mipLevels;
+        textureDesc.Format = convertFormat(createInfo->format);
+        textureDesc.Width = createInfo->extent.width;
+        textureDesc.Height = createInfo->extent.height;
+        textureDesc.Flags = D3D12_RESOURCE_FLAG_NONE; // TODO: flags support
+        textureDesc.DepthOrArraySize = createInfo->extent.depth;
+
+        // 
+        textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE1D;
+        if (createInfo->imageType == VK_IMAGE_TYPE_2D) { textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D; };
+        if (createInfo->imageType == VK_IMAGE_TYPE_3D) { textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE3D; };
+
+        // TODO: Multi-Sampling Support
+        textureDesc.SampleDesc.Count = 1;
+        textureDesc.SampleDesc.Quality = 0;
+
+
         return VK_SUCCESS;
     };
 
