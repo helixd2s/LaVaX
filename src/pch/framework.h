@@ -1051,6 +1051,7 @@ inline D3D12_RESOURCE_STATES getResourceState(const vkh::VkAccessFlags& accessMa
     if (accessMask.eAccelerationStructureRead) { return D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE; };
     if (accessMask.eAccelerationStructureWrite) { return D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE; };
     if (accessMask.eUniformRead) { return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER; };
+    if (accessMask.eShaderRead) { return D3D12_RESOURCE_STATE_GENERIC_READ; };
     if (accessMask.eVertexAttributeRead) { return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER; };
     if (accessMask.eTransformFeedbackWrite) { return D3D12_RESOURCE_STATE_STREAM_OUT; };
     if (accessMask.eShadingRateImageRead) { return D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE; };
