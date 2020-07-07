@@ -1,11 +1,23 @@
 ﻿  VkInstance.cpp
   VkPhysicalDevice.cpp
-  VkQueue.cpp
   VkBufferView_T.cpp
 F:\Data\Projects\LaVaX\src\objects\VkBufferView_T.cpp(29,48): warning C4244: '=': conversion from 'const VkDeviceSize' to 'UINT', possible loss of data
 F:\Data\Projects\LaVaX\src\objects\VkBufferView_T.cpp(41,56): warning C4244: '=': conversion from 'VkDeviceSize' to 'UINT', possible loss of data
   VkBuffer_T.cpp
   VkCommandBuffer_T.cpp
-F:\Data\Projects\LaVaX\src\objects\VkCommandBuffer_T.cpp(7,121): error C2572: 'lvx::VkCommandBuffer_T::VkCommandBuffer_T': redefinition of default argument: parameter 1
-F:\Data\Projects\LaVaX\src\objects\VkCommandBuffer_T.hpp(18): message : see declaration of 'lvx::VkCommandBuffer_T::VkCommandBuffer_T'
   VkCommandPool_T.cpp
+  VkDescriptorSetLayout_T.cpp
+  VkDescriptorSet_T.cpp
+  VkDeviceMemory_T.cpp
+  VkDevice_T.cpp
+  VkFramebuffer_T.cpp
+  VkImageView_T.cpp
+  VkImage_T.cpp
+  VkInstance_T.cpp
+  VkPhysicalDevice_T.cpp
+  VkPipelineLayout_T.cpp
+F:\Data\Projects\LaVaX\src\objects\VkPipelineLayout_T.cpp(15,155): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  VkQueue_T.cpp
+  VkRenderPass_T.cpp
+     Creating library F:\Data\Projects\LaVaX\build\x64\Debug\build.lib and object F:\Data\Projects\LaVaX\build\x64\Debug\build.exp
+  build.vcxproj -> F:\Data\Projects\LaVaX\build\x64\Debug\build.dll

@@ -1,0 +1,2 @@
+F:\Data\Projects\LaVaX\build\x64\Debug\build.dll
+F:\Data\Projects\LaVaX\build\x64\Debug\build.pdb

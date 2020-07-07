@@ -29,7 +29,7 @@ namespace lvx {
     class VkFramebuffer_T;
 
     // Final Fight
-    D3D12_SRV_DIMENSION convertDimension(const VkImageViewType& type) {
+    inline D3D12_SRV_DIMENSION convertDimension(const VkImageViewType& type) {
         switch(type) {
             case VK_IMAGE_VIEW_TYPE_1D: return D3D12_SRV_DIMENSION_TEXTURE1D; break;
             case VK_IMAGE_VIEW_TYPE_2D: return D3D12_SRV_DIMENSION_TEXTURE2D; break;
@@ -44,7 +44,7 @@ namespace lvx {
     };
 
     // Format Fight
-    DXGI_FORMAT convertFormat(const VkFormat& format) {
+    inline DXGI_FORMAT convertFormat(const VkFormat& format) {
         switch(format) {
             // Signed float 32-bit
             case VK_FORMAT_R32G32B32A32_SFLOAT: DXGI_FORMAT_R32G32B32A32_FLOAT;
@@ -124,7 +124,7 @@ namespace lvx {
         return DXGI_FORMAT_UNKNOWN;
     };
 
-    D3D12_DESCRIPTOR_RANGE_TYPE convertDescriptorType(const VkDescriptorType& type) {
+    inline D3D12_DESCRIPTOR_RANGE_TYPE convertDescriptorType(const VkDescriptorType& type) {
         switch (type) {
             case VK_DESCRIPTOR_TYPE_INLINE_UNIFORM_BLOCK_EXT: return D3D12_DESCRIPTOR_RANGE_TYPE_CBV; break;
             case VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER: return D3D12_DESCRIPTOR_RANGE_TYPE_CBV; break;
