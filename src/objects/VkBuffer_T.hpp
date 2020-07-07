@@ -13,7 +13,8 @@ namespace lvx {
         VkBufferCreateInfo createInfo = {};
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
-        
+        D3D12_RESOURCE_DESC bufferDesc = {};
+
     public:
         VkBuffer_T() {}
         VkBuffer_T(const lvx::VkDevice_T* device, HPTR(VkBufferCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks) {

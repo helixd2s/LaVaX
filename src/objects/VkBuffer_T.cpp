@@ -10,19 +10,22 @@ namespace lvx {
 
         
         // Describe and create a Texture2D.
-        D3D12_RESOURCE_DESC textureDesc = {};
-        textureDesc.MipLevels = 1;
-        textureDesc.Format = DXGI_FORMAT_UNKNOWN;
-        textureDesc.Width = createInfo->size;
-        //textureDesc.Layout = D3D12_TEXTURE_LAYOUT_ROW_MAJOR; // For Vulkan API unusual term...
-        textureDesc.Flags = D3D12_RESOURCE_FLAG_NONE; // TODO: flags support
+        D3D12_RESOURCE_DESC bufferDesc = {};
+        bufferDesc.MipLevels = 1;
+        bufferDesc.Format = DXGI_FORMAT_UNKNOWN;
+        bufferDesc.Width = createInfo->size;
+        //bufferDesc.Layout = D3D12_TEXTURE_LAYOUT_ROW_MAJOR; // For Vulkan API unusual term...
+        bufferDesc.Flags = D3D12_RESOURCE_FLAG_NONE; // TODO: flags support
 
         // 
-        textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_BUFFER;
+        bufferDesc.Dimension = D3D12_RESOURCE_DIMENSION_BUFFER;
 
         // 
-        textureDesc.SampleDesc.Count = 1;
-        textureDesc.SampleDesc.Quality = 0;
+        bufferDesc.SampleDesc.Count = 1;
+        bufferDesc.SampleDesc.Quality = 0;
+
+        // 
+        ThrowIfFailed(device->GetDevice()->CreateCommittedResource(&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT), D3D12_HEAP_FLAG_NONE, &bufferDesc, D3D12_RESOURCE_STATE_COMMON, nullptr, IID_PPV_ARGS(&resource)));
 
         
         return VK_SUCCESS;
