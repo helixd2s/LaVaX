@@ -24,6 +24,7 @@ namespace lvx {
 
         // Used default access flags 
         // TODO: Get Access Flags by Buffer Usage (if single usage defined)
+        // TODO: Use Memory Heaps for resources
         ThrowIfFailed(device->GetDevice()->CreateCommittedResource(&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT), D3D12_HEAP_FLAG_NONE, &bufferDesc, D3D12_RESOURCE_STATE_COMMON, nullptr, IID_PPV_ARGS(&resource)));
 
         // 
