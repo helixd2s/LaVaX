@@ -4,7 +4,7 @@
 
 namespace lvx {
 
-    VkCommandBuffer_T::VkCommandBuffer_T(const lvx::VkDevice_T* device, ComPtr<ID3D12GraphicsCommandList> commandList = {}) : device(VkDevice(device)), commandList(commandList) {
+    VkCommandBuffer_T::VkCommandBuffer_T(const lvx::VkDevice_T* device, ComPtr<ID3D12GraphicsCommandList> commandList) : device(VkDevice(device)), commandList(commandList) {
         
     };
 

@@ -4,7 +4,7 @@
 
 namespace lvx {
 
-    VkDeviceMemory_T::VkDeviceMemory_T(const lvx::VkDevice_T* device, ComPtr<ID3D12Heap> memoryHeap = {}) : device(VkDevice(device)), memoryHeap(memoryHeap) {
+    VkDeviceMemory_T::VkDeviceMemory_T(const lvx::VkDevice_T* device, ComPtr<ID3D12Heap> memoryHeap) : device(VkDevice(device)), memoryHeap(memoryHeap) {
         
     };
 

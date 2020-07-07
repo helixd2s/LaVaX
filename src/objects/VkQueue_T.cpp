@@ -4,7 +4,7 @@
 
 namespace lvx {
 
-    VkQueue_T::VkQueue_T(const lvx::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue ={}) : device(VkDevice(device)), commandQueue(commandQueue) {
+    VkQueue_T::VkQueue_T(const lvx::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue) : device(VkDevice(device)), commandQueue(commandQueue) {
         
         // 
         D3D12_COMMAND_QUEUE_DESC queueDesc = {};

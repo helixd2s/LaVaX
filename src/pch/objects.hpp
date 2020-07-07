@@ -38,7 +38,7 @@ namespace lvx {
             case VK_IMAGE_VIEW_TYPE_2D_ARRAY: return D3D12_SRV_DIMENSION_TEXTURE2DARRAY; break;
             case VK_IMAGE_VIEW_TYPE_CUBE: return D3D12_SRV_DIMENSION_TEXTURECUBE; break;
             case VK_IMAGE_VIEW_TYPE_CUBE_ARRAY: return D3D12_SRV_DIMENSION_TEXTURECUBEARRAY; break;
-            default: 
+            default:;
         };
         return D3D12_SRV_DIMENSION_UNKNOWN;
     };

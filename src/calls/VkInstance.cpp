@@ -1,4 +1,4 @@
-#include <lvx/LaVaXulkan.hpp>
+#include <lvx/lavax.hpp>
 
 #include "pch/pch.h"
 #include "objects/VkInstance_T.hpp"

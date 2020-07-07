@@ -92,7 +92,6 @@
     <ClInclude Include="..\..\vkt\include\xvk\xvkBase.hpp" />
     <ClInclude Include="..\..\vkt\include\xvk\xvkInterface.h" />
     <ClInclude Include="..\..\vkt\include\xvk\xvkInterface.hpp" />
-    <ClInclude Include="..\include\lvx\LaVaXulkan.hpp" />
     <ClInclude Include="..\src\objects\VkBufferView_T.hpp" />
     <ClInclude Include="..\src\objects\VkBuffer_T.hpp" />
     <ClInclude Include="..\src\objects\VkCommandBuffer_T.hpp" />
@@ -241,7 +240,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ENABLE_VULKAN_HPP;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch/pch.h</PrecompiledHeaderFile>

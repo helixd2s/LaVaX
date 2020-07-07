@@ -31,10 +31,15 @@ namespace lvx {
 
         // TODO: Remove Vulkan-HPP Requirements
 #ifdef VULKAN_HPP // When Vulkan-HPP Available, use Vookoo imported block params
-        auto blockParam = vkh::getBlockParams(vk::Format(createInfo->format));
+        const auto blockParam = vkh::getBlockParams(vk::Format(createInfo->format));
         srvDesc.Buffer.FirstElement = createInfo->offset / blockParam.bytesPerBlock;
         srvDesc.Buffer.NumElements = createInfo->range / blockParam.bytesPerBlock;
         srvDesc.Buffer.StructureByteStride = blockParam.bytesPerBlock;
+#else
+        const auto blockParam = formats_block[createInfo->format];
+        srvDesc.Buffer.FirstElement = createInfo->offset / (blockParam.bits>>3u);
+        srvDesc.Buffer.NumElements = createInfo->range / (blockParam.bits >> 3u);
+        srvDesc.Buffer.StructureByteStride = (blockParam.bits >> 3u);
 #endif
 
         // TODO: Return Result 
