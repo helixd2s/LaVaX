@@ -25,6 +25,7 @@ namespace lvx {
         // 
         VkResult Create(const lvx::VkDevice_T* device, HPTR(VkImageCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
         VkResult BindMemory(const lvx::VkDevice_T* device, const lvx::VkDeviceMemory_T* memory, const VkDeviceSize& offset = 0ull);
+        VkResult GetMemoryRequirements(const lvx::VkDevice_T* device, VkMemoryRequirements* requirements);
         ComPtr<ID3D12Resource> GetResource() const { return resource; };
         ID3D12Resource* Get() const { return resource.Get(); };
     };

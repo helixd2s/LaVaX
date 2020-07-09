@@ -36,4 +36,15 @@ namespace lvx {
         return VK_SUCCESS;
     };
 
+    // 
+    VkResult VkBuffer_T::GetMemoryRequirements(const lvx::VkDevice_T* device, VkMemoryRequirements* requirements) {
+        D3D12_RESOURCE_ALLOCATION_INFO allocationInfo = device->GetDevice()->GetResourceAllocationInfo(0u, 1u, &bufferDesc); // TODO: Multi-GPU Support
+        requirements->alignment = allocationInfo.Alignment;
+        requirements->size = allocationInfo.SizeInBytes;
+        requirements->memoryTypeBits = 7u; // Also, can be CPU read or write
+
+        // TODO: Correct VkResult
+        return VK_SUCCESS;
+    };
+
 };
