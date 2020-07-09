@@ -17,6 +17,7 @@ namespace lvx {
         //bufferDesc.Layout = D3D12_TEXTURE_LAYOUT_ROW_MAJOR; // For Vulkan API unusual term...
         bufferDesc.Flags = D3D12_RESOURCE_FLAG_NONE; // TODO: flags support
         bufferDesc.Dimension = D3D12_RESOURCE_DIMENSION_BUFFER;
+        bufferDesc.Alignment = 4u; // 32-bit every as minimum
 
         // 
         bufferDesc.SampleDesc.Count = 1;

@@ -44,6 +44,7 @@ namespace lvx {
         textureDesc.Height = createInfo->extent.height;
         textureDesc.Flags = D3D12_RESOURCE_FLAG_NONE; // TODO: flags support
         textureDesc.DepthOrArraySize = createInfo->extent.depth;
+        textureDesc.Alignment = 4u; // 32-bit every as minimum
 
         // 
         textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE1D;
