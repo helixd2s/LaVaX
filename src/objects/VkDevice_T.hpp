@@ -65,6 +65,10 @@ namespace lvx {
         // 
         ComPtr<ID3D12Device> GetDevice() const { return this->device; }
         VkResult Create(const lvx::VkPhysicalDevice_T* physicalDevice, HPTR(VkDeviceCreateInfo) createInfo, UPTR(VkAllocationCallbacks) callbacks);
+        VkResult Result() const { return result; };
+
+        // 
+        VkPhysicalDevice PhysicalDevice() const { return this->physicalDevice; };
 
         // 
         ID3D12Device* Get() const { return device.Get(); };

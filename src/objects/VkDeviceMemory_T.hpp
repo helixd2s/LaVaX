@@ -22,8 +22,10 @@ namespace lvx {
 
         //
         VkResult Create(const lvx::VkDevice_T* device, const VkMemoryAllocateInfo* allocateInfo, const VkAllocationCallbacks* callbacks);
+        VkResult Result() const { return result; };
 
         // 
+        ComPtr<ID3D12Heap> Heap() const { return memoryHeap; };
         ID3D12Heap* Get() const { return memoryHeap.Get(); };
     };
 

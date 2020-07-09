@@ -5,7 +5,7 @@
 
 // 
 namespace lvx {
-    class VkPhysicalDevice_T { friend VkDevice_T;
+    class VkPhysicalDevice_T { friend VkDevice_T; friend VkDeviceMemory_T;
     protected:
         ComPtr<IDXGIAdapter1> adapter = {};
         ComPtr<ID3D12Device> device = {};

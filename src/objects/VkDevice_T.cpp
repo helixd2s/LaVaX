@@ -1,6 +1,7 @@
 #include "pch/pch.h"
 #include "VkDevice_T.hpp"
 #include "VkPhysicalDevice_T.hpp"
+#include "VkDeviceMemory_T.hpp"
 
 namespace lvx {
 
@@ -26,12 +27,9 @@ namespace lvx {
     };
 
     VkResult VkDevice_T::AllocateMemory(const VkMemoryAllocateInfo* pAllocateInfo, const VkAllocationCallbacks* pAllocator, VkDeviceMemory* pMemory) {
-        D3D12_HEAP_DESC memDesc = {};
-        VkPhysicalDevice_T* pGPU = reinterpret_cast<VkPhysicalDevice_T*>(physicalDevice);
-        memDesc.Alignment = D3D12_DEFAULT_RESOURCE_PLACEMENT_ALIGNMENT;
-        //memDesc.Flags = ; // TODO: SUPPORT FOR `VkMemoryAllocateFlagsInfo`
-        memDesc.Properties = pGPU->heapType[pAllocateInfo->memoryTypeIndex];
-        memDesc.SizeInBytes = pAllocateInfo->allocationSize;
+        auto deviceMemory = new VkDeviceMemory_T(this, pAllocateInfo, pAllocator);
+        *pMemory = VkDeviceMemory(deviceMemory);
+        return deviceMemory->Result();
     };
 
 };
