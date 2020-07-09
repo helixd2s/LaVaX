@@ -25,4 +25,13 @@ namespace lvx {
         return VK_SUCCESS;
     };
 
+    VkResult VkDevice_T::AllocateMemory(const VkMemoryAllocateInfo* pAllocateInfo, const VkAllocationCallbacks* pAllocator, VkDeviceMemory* pMemory) {
+        D3D12_HEAP_DESC memDesc = {};
+        VkPhysicalDevice_T* pGPU = reinterpret_cast<VkPhysicalDevice_T*>(physicalDevice);
+        memDesc.Alignment = D3D12_DEFAULT_RESOURCE_PLACEMENT_ALIGNMENT;
+        //memDesc.Flags = ; // TODO: SUPPORT FOR `VkMemoryAllocateFlagsInfo`
+        memDesc.Properties = pGPU->heapType[pAllocateInfo->memoryTypeIndex];
+        memDesc.SizeInBytes = pAllocateInfo->allocationSize;
+    };
+
 };

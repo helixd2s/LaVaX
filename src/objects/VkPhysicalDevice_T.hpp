@@ -5,12 +5,13 @@
 
 // 
 namespace lvx {
-    class VkPhysicalDevice_T {
+    class VkPhysicalDevice_T { friend VkDevice_T;
     protected:
         ComPtr<IDXGIAdapter1> adapter = {};
         ComPtr<ID3D12Device> device = {};
         VkInstance instance = VK_NULL_HANDLE;
         UINT nodeMask = 1u;
+        std::array<D3D12_HEAP_PROPERTIES, 4u> heapType = {};
 
     public:
         VkPhysicalDevice_T() {};

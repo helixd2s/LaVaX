@@ -68,5 +68,8 @@ namespace lvx {
 
         // 
         ID3D12Device* Get() const { return device.Get(); };
+
+        // 
+        VkResult AllocateMemory(const VkMemoryAllocateInfo* pAllocateInfo, const VkAllocationCallbacks* pAllocator, VkDeviceMemory* pMemory);
     };
 };
