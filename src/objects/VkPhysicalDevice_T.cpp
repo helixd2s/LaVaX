@@ -48,8 +48,8 @@ namespace lvx {
             auto& properties = (heapType[i++] = device->GetCustomHeapProperties(nodeMask, type));
             
             // 
-            if (properties.MemoryPoolPreference == D3D12_MEMORY_POOL_L1) { 
-                flags |= VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT; 
+            if (properties.MemoryPoolPreference == D3D12_MEMORY_POOL_L1 || properties.CPUPageProperty == D3D12_CPU_PAGE_PROPERTY_NOT_AVAILABLE) { 
+                flags |= VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT;
             };
             if (properties.CPUPageProperty == D3D12_CPU_PAGE_PROPERTY_WRITE_COMBINE) {
                 flags |= VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT | VK_MEMORY_PROPERTY_HOST_CACHED_BIT;
