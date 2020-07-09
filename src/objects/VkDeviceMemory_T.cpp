@@ -4,8 +4,16 @@
 
 namespace lvx {
 
-    VkDeviceMemory_T::VkDeviceMemory_T(const lvx::VkDevice_T* device, ComPtr<ID3D12Heap> memoryHeap) : device(VkDevice(device)), memoryHeap(memoryHeap) {
+    VkResult VkDeviceMemory_T::Create(const lvx::VkDevice_T* device, const VkMemoryAllocateInfo* allocateInfo, const VkAllocationCallbacks* callbacks) {
+        // TODO: Memory Heap Properties...
+        D3D12_HEAP_PROPERTIES properties = {};
         
+        // 
+        D3D12_HEAP_DESC HeapDesc = { allocateInfo->allocationSize, properties, D3D12_DEFAULT_RESOURCE_PLACEMENT_ALIGNMENT, D3D12_HEAP_FLAG_NONE };
+        ThrowIfFailed(device->GetDevice()->CreateHeap(&HeapDesc, IID_PPV_ARGS(&memoryHeap)));
+
+        // 
+        return VK_SUCCESS;
     };
 
 };

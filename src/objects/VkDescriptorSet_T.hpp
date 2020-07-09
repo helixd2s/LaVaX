@@ -16,11 +16,12 @@ namespace lvx {
 
     public:
         VkDescriptorSet_T() {}
-        VkDescriptorSet_T(const lvx::VkDevice_T* device, const lvx::VkDescriptorPool_T* descriptorPool, const lvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
-            this->result = this->Create(device, descriptorPool, descriptorSetLayout, callbacks);
+        VkDescriptorSet_T(const lvx::VkDevice_T* device, HPTR(VkDescriptorSetAllocateInfo) createInfo, const lvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks) {
+            this->result = this->Create(device, createInfo, descriptorSetLayout, callbacks);
         };
 
-        VkResult Create(const lvx::VkDevice_T* device, const lvx::VkDescriptorPool_T* descriptorPool, const lvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks);
+        // 
+        VkResult Create(const lvx::VkDevice_T* device, HPTR(VkDescriptorSetAllocateInfo) createInfo, const lvx::VkDescriptorSetLayout_T* descriptorSetLayout, UPTR(VkAllocationCallbacks) callbacks);
 
         // 
         ID3D12DescriptorHeap* Get() const { return heap.Get(); };

@@ -16,7 +16,12 @@ namespace lvx {
         
     public:
         VkDeviceMemory_T() {}
-        VkDeviceMemory_T(const lvx::VkDevice_T* device, ComPtr<ID3D12Heap> memoryHeap = {});
+        VkDeviceMemory_T(const lvx::VkDevice_T* device, const VkMemoryAllocateInfo* allocateInfo, const VkAllocationCallbacks* callbacks) {
+            this->result = this->Create(device, allocateInfo, callbacks);
+        };
+
+        //
+        VkResult Create(const lvx::VkDevice_T* device, const VkMemoryAllocateInfo* allocateInfo, const VkAllocationCallbacks* callbacks);
 
         // 
         ID3D12Heap* Get() const { return memoryHeap.Get(); };

@@ -8,17 +8,20 @@ namespace lvx {
 
     class VkCommandBuffer_T {
     protected:
-        ComPtr<ID3D12GraphicsCommandList> commandList = {};
+        ComPtr<ID3D12GraphicsCommandList1> commandList = {};
         VkImageViewCreateInfo createInfo = {};
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
         
     public:
         VkCommandBuffer_T() {}
-        VkCommandBuffer_T(const lvx::VkDevice_T* device, ComPtr<ID3D12GraphicsCommandList> commandList = {});
+        VkCommandBuffer_T(const lvx::VkDevice_T* device, const HPTR(VkCommandBufferAllocateInfo) createInfo) {
+            this->result = this->Create(device, createInfo);
+        };
 
         // 
-        ID3D12GraphicsCommandList* Get() const { return commandList.Get(); };
+        VkResult Create(const lvx::VkDevice_T* device, const HPTR(VkCommandBufferAllocateInfo) createInfo);
+        ID3D12GraphicsCommandList1* Get() const { return commandList.Get(); };
     };
 
 };

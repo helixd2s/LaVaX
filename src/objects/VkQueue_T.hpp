@@ -15,9 +15,12 @@ namespace lvx {
 
     public:
         VkQueue_T() {}
-        VkQueue_T(const lvx::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue);
+        VkQueue_T(const lvx::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue) {
+            this->result = Create(device, commandQueue);
+        };
 
         // 
+        VkResult Create(const lvx::VkDevice_T* device, ComPtr<ID3D12CommandQueue> commandQueue);
         ID3D12CommandQueue* Get() const { return commandQueue.Get(); };
     };
 
