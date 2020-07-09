@@ -7,8 +7,8 @@
 namespace lvx {
 
     // TODO: VkRenderPassCreateInfo2 based object
-    class VkRenderPass_T {
-    protected: friend VkFramebuffer_T;
+    class VkRenderPass_T { 
+    protected: friend VkFramebuffer_T; friend VkCommandBuffer_T;
         // Imported From VKH helpers
         VkRenderPassCreateInfo createInfo = {};
         std::vector<VkAttachmentDescription> attachments = {};

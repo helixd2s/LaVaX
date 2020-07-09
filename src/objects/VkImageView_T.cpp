@@ -26,7 +26,7 @@ namespace lvx {
         this->createInfo = createInfo;
         this->device = VkDevice(device);
         this->callbacks = const_cast<vkt::uni_arg<VkAllocationCallbacks>&>(callbacks);
-
+        
         // Describe and create a SRV for the texture.
         D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
         srvDesc.Format = convertFormat(createInfo->format);
@@ -82,7 +82,9 @@ namespace lvx {
         );
 
         // 
-        device->GetDevice()->CreateShaderResourceView(reinterpret_cast<VkImage_T*>(createInfo->image)->GetResource().Get(), &srvDesc, Handle);
+        device->GetDevice()->CreateShaderResourceView((this->resource = reinterpret_cast<VkImage_T*>(createInfo->image)->GetResource()).Get(), &srvDesc, Handle);
+        
+        // 
         return VK_SUCCESS; // TODO: Return Result 
     };
 

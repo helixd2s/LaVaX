@@ -6,13 +6,18 @@
 // 
 namespace lvx {
 
-    class VkSubpass_T { public: 
-        std::vector<D3D12_CPU_DESCRIPTOR_HANDLE> colorAttachments = {};
-        D3D12_CPU_DESCRIPTOR_HANDLE depthStencilAttachment = {};
+    class VkSubpass_T { public: friend VkCommandBuffer_T;
+        std::vector<VkImageView> colorAttachments = {};
+        std::vector<VkImageLayout> colorAttachmentsInitialLayout = {};
+        std::vector<VkImageLayout> colorAttachmentsTargetLayout = {};
+
+        VkImageView depthStencilAttachment = {};
+        VkImageLayout depthStencilAttachmentInitialLayout = {};
+        VkImageLayout depthStencilAttachmentTargetLayout = {};
     };
 
     class VkFramebuffer_T {
-    protected:
+    protected: friend VkCommandBuffer_T;
         ComPtr<ID3D12DescriptorHeap> heap = {};
         VkFramebufferCreateInfo createInfo = {}; // TODO: Cache Create Info with All Pointers
         VkDevice device = VK_NULL_HANDLE;

@@ -9,6 +9,7 @@ namespace lvx {
     class VkBufferView_T {
     protected:
         ComPtr<ID3D12DescriptorHeap> heap = {};
+        ComPtr<ID3D12Resource> resource = {};
         VkBufferViewCreateInfo createInfo = {};
         VkDevice device = VK_NULL_HANDLE;
         VkResult result = VK_SUCCESS;
@@ -31,6 +32,7 @@ namespace lvx {
 
         // 
         ID3D12DescriptorHeap* Get() const { return heap.Get(); };
+        ID3D12Resource* GetResource() const { return resource.Get(); };
     };
 
 };

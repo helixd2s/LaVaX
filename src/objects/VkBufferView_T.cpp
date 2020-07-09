@@ -43,7 +43,7 @@ namespace lvx {
 #endif
 
         // TODO: Return Result 
-        device->GetDevice()->CreateShaderResourceView(reinterpret_cast<VkBuffer_T*>(createInfo->buffer)->GetResource().Get(), &srvDesc, this->heap->GetCPUDescriptorHandleForHeapStart());
+        device->GetDevice()->CreateShaderResourceView((this->resource = reinterpret_cast<VkBuffer_T*>(createInfo->buffer)->GetResource()).Get(), &srvDesc, this->heap->GetCPUDescriptorHandleForHeapStart());
         return VK_SUCCESS;
     };
 
