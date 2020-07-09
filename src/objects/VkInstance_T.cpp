@@ -39,8 +39,9 @@ namespace lvx {
                 adapter->GetDesc1(&desc);
 
                 // Look Only for D3D12 Devices
-                if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE || !SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_12_0, _uuidof(ID3D12Device), nullptr))) { continue; }
-                this->devices.push_back(VkPhysicalDevice(new lvx::VkPhysicalDevice_T(this, adapter)));
+                ComPtr<ID3D12Device> device = {};
+                if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE || !SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_12_0, IID_PPV_ARGS(&device)))) { continue; }
+                this->devices.push_back(VkPhysicalDevice(new lvx::VkPhysicalDevice_T(this, adapter, device)));
             };
         };
 
