@@ -1,6 +1,7 @@
 #include "pch/pch.h"
 #include "VkDevice_T.hpp"
 #include "VkImage_T.hpp"
+#include "VkDeviceMemory_T.hpp"
 
 namespace lvx {
 
@@ -37,7 +38,6 @@ namespace lvx {
         this->device = VkDevice(device);
 
         // Describe and create a Texture2D.
-        D3D12_RESOURCE_DESC textureDesc = {};
         textureDesc.MipLevels = createInfo->mipLevels;
         textureDesc.Format = convertFormat(createInfo->format);
         textureDesc.Width = createInfo->extent.width;
@@ -56,7 +56,16 @@ namespace lvx {
 
         // 
         // TODO: Use Memory Heaps for resources
-        ThrowIfFailed(device->GetDevice()->CreateCommittedResource(&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT), D3D12_HEAP_FLAG_NONE, &textureDesc, getResourceState(createInfo->initialLayout), nullptr, IID_PPV_ARGS(&resource)));
+        this->initialLayout = createInfo->initialLayout;
+
+        // TODO: Correct VkResult
+        return VK_SUCCESS;
+    };
+
+    // 
+    VkResult VkImage_T::BindMemory(const lvx::VkDevice_T* device, const lvx::VkDeviceMemory_T* memory, const VkDeviceSize& offset) {
+        // TODO: Missed features...
+        ThrowIfFailed(device->GetDevice()->CreatePlacedResource(memory->Get(), offset, &textureDesc, getResourceState(this->initialLayout), nullptr, IID_PPV_ARGS(&resource)));
 
         // TODO: Correct VkResult
         return VK_SUCCESS;

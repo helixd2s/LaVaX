@@ -1,6 +1,7 @@
 #include "pch/pch.h"
 #include "VkDevice_T.hpp"
 #include "VkBuffer_T.hpp"
+#include "VkDeviceMemory_T.hpp"
 
 namespace lvx {
 
@@ -10,7 +11,6 @@ namespace lvx {
 
         
         // Describe and create a Texture2D.
-        D3D12_RESOURCE_DESC bufferDesc = {};
         bufferDesc.MipLevels = 1;
         bufferDesc.Format = DXGI_FORMAT_UNKNOWN;
         bufferDesc.Width = createInfo->size;
@@ -22,12 +22,17 @@ namespace lvx {
         bufferDesc.SampleDesc.Count = 1;
         bufferDesc.SampleDesc.Quality = 0;
 
+        // 
+        return VK_SUCCESS;
+    };
+
+    VkResult VkBuffer_T::BindMemory(const lvx::VkDevice_T* device, const lvx::VkDeviceMemory_T* memory, const VkDeviceSize& offset){
         // Used default access flags 
         // TODO: Get Access Flags by Buffer Usage (if single usage defined)
         // TODO: Use Memory Heaps for resources
-        ThrowIfFailed(device->GetDevice()->CreateCommittedResource(&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT), D3D12_HEAP_FLAG_NONE, &bufferDesc, D3D12_RESOURCE_STATE_COMMON, nullptr, IID_PPV_ARGS(&resource)));
+        ThrowIfFailed(device->GetDevice()->CreatePlacedResource(memory->Get(), offset, &bufferDesc, D3D12_RESOURCE_STATE_COMMON, nullptr, IID_PPV_ARGS(&resource)));
 
-        // 
+        // TODO: Correct VkResult
         return VK_SUCCESS;
     };
 
