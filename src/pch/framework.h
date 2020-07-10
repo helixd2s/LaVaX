@@ -1048,23 +1048,23 @@ inline D3D12_RESOURCE_STATES getResourceState(const VkImageLayout& layout){
 // WIP! NOT All Complete! 
 inline D3D12_RESOURCE_STATES getResourceState(const vkh::VkAccessFlags& accessMask) {
     if (std::bitset<(sizeof(uint32_t)*CHAR_BIT)>(uint32_t(accessMask)).count() >= 3u) { return D3D12_RESOURCE_STATE_COMMON; }; // If bits overloaded...
-    if (accessMask.eTransferRead) { return D3D12_RESOURCE_STATE_COPY_SOURCE; };
     if (accessMask.eTransferWrite) { return D3D12_RESOURCE_STATE_COPY_DEST; };
-    if (accessMask.eHostRead) { return D3D12_RESOURCE_STATE_COPY_SOURCE; };
+    if (accessMask.eTransferRead) { return D3D12_RESOURCE_STATE_COPY_SOURCE; };
     if (accessMask.eHostWrite) { return D3D12_RESOURCE_STATE_COPY_DEST; };
-    if (accessMask.eAccelerationStructureRead) { return D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE; };
+    if (accessMask.eHostRead) { return D3D12_RESOURCE_STATE_COPY_SOURCE; };
     if (accessMask.eAccelerationStructureWrite) { return D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE; };
+    if (accessMask.eAccelerationStructureRead) { return D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE; };
+    if (accessMask.eDepthStencilAttachmentWrite) { return D3D12_RESOURCE_STATE_DEPTH_WRITE; };
+    if (accessMask.eDepthStencilAttachmentRead) { return D3D12_RESOURCE_STATE_DEPTH_READ; };
+    if (accessMask.eColorAttachmentWrite) { return D3D12_RESOURCE_STATE_RENDER_TARGET; };
+    if (accessMask.eColorAttachmentRead) { return D3D12_RESOURCE_STATE_RENDER_TARGET; };
+    if (accessMask.eTransformFeedbackWrite) { return D3D12_RESOURCE_STATE_STREAM_OUT; };
+    if (accessMask.eVertexAttributeRead) { return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER; };
     if (accessMask.eUniformRead) { return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER; };
     if (accessMask.eShaderRead) { return D3D12_RESOURCE_STATE_GENERIC_READ; };
-    if (accessMask.eVertexAttributeRead) { return D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER; };
-    if (accessMask.eTransformFeedbackWrite) { return D3D12_RESOURCE_STATE_STREAM_OUT; };
-    if (accessMask.eShadingRateImageRead) { return D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE; };
-    if (accessMask.eDepthStencilAttachmentRead) { return D3D12_RESOURCE_STATE_DEPTH_READ; };
-    if (accessMask.eDepthStencilAttachmentWrite) { return D3D12_RESOURCE_STATE_DEPTH_WRITE; };
-    if (accessMask.eIndirectCommandRead) { return D3D12_RESOURCE_STATE_INDIRECT_ARGUMENT; };
-    if (accessMask.eColorAttachmentRead) { return D3D12_RESOURCE_STATE_RENDER_TARGET; };
-    if (accessMask.eColorAttachmentWrite) { return D3D12_RESOURCE_STATE_RENDER_TARGET; };
     if (accessMask.eIndexRead) { return D3D12_RESOURCE_STATE_INDEX_BUFFER; };
+    if (accessMask.eShadingRateImageRead) { return D3D12_RESOURCE_STATE_SHADING_RATE_SOURCE; };
+    if (accessMask.eIndirectCommandRead) { return D3D12_RESOURCE_STATE_INDIRECT_ARGUMENT; };
     return D3D12_RESOURCE_STATE_COMMON;
 };
 
