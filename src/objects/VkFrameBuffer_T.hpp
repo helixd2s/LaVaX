@@ -7,13 +7,11 @@
 namespace lvx {
 
     class VkSubpass_T { public: friend VkCommandBuffer_T;
-        std::vector<VkImageView> colorAttachments = {};
-        std::vector<VkImageLayout> colorAttachmentsInitialLayout = {};
-        std::vector<VkImageLayout> colorAttachmentsTargetLayout = {};
+        std::vector<CD3DX12_CPU_DESCRIPTOR_HANDLE> colorAttachments = {};
+        std::vector<uint32_t> colorAttachmentsIndex = {};
 
-        VkImageView depthStencilAttachment = {};
-        VkImageLayout depthStencilAttachmentInitialLayout = {};
-        VkImageLayout depthStencilAttachmentTargetLayout = {};
+        CD3DX12_CPU_DESCRIPTOR_HANDLE depthStencilAttachment = {};
+        uint32_t depthStencilAttachmentIndex = {};
     };
 
     class VkFramebuffer_T {
@@ -38,7 +36,7 @@ namespace lvx {
 
         // 
         ID3D12DescriptorHeap* Get() const { return heap.Get(); };
-        
+        const VkFramebufferCreateInfo& GetCreateInfo() { return createInfo; };
     };
 
 };

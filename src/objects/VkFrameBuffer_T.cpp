@@ -41,17 +41,19 @@ namespace lvx {
             this->subpasses.push_back(VkSubpass_T{});
             for (uint32_t i=0;i<subpass.colorAttachmentCount;i++) {
                 auto& attachment = subpass.pColorAttachments[i];
-                //this->subpasses.back().colorAttachments.push_back(CD3DX12_CPU_DESCRIPTOR_HANDLE(this->heap->GetCPUDescriptorHandleForHeapStart(), attachment.attachment, device->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV)));
-                this->subpasses.back().colorAttachments.push_back(createInfo->pAttachments[attachment.attachment]);
-                this->subpasses.back().colorAttachmentsInitialLayout.push_back(renderPass->attachments[attachment.attachment].initialLayout);
-                this->subpasses.back().colorAttachmentsTargetLayout.push_back(renderPass->attachments[attachment.attachment].finalLayout);
+                this->subpasses.back().colorAttachments.push_back(CD3DX12_CPU_DESCRIPTOR_HANDLE(this->heap->GetCPUDescriptorHandleForHeapStart(), attachment.attachment, device->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV)));
+                //this->subpasses.back().colorAttachments.push_back(createInfo->pAttachments[attachment.attachment]);
+                this->subpasses.back().colorAttachmentsIndex.push_back(attachment.attachment);
+                //this->subpasses.back().colorAttachmentsInitialLayout.push_back(renderPass->attachments[attachment.attachment].initialLayout);
+                //this->subpasses.back().colorAttachmentsTargetLayout.push_back(renderPass->attachments[attachment.attachment].finalLayout);
             };
             if (subpass.pDepthStencilAttachment) {
                 auto& attachment = subpass.pDepthStencilAttachment[0];
-                //this->subpasses.back().depthStencilAttachment = CD3DX12_CPU_DESCRIPTOR_HANDLE(this->heap->GetCPUDescriptorHandleForHeapStart(), attachment.attachment, device->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV));
-                this->subpasses.back().depthStencilAttachment = createInfo->pAttachments[attachment.attachment];
-                this->subpasses.back().depthStencilAttachmentInitialLayout = renderPass->attachments[attachment.attachment].initialLayout;
-                this->subpasses.back().depthStencilAttachmentTargetLayout = renderPass->attachments[attachment.attachment].finalLayout;
+                this->subpasses.back().depthStencilAttachment = CD3DX12_CPU_DESCRIPTOR_HANDLE(this->heap->GetCPUDescriptorHandleForHeapStart(), attachment.attachment, device->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV));
+                //this->subpasses.back().depthStencilAttachment = createInfo->pAttachments[attachment.attachment];
+                this->subpasses.back().depthStencilAttachmentIndex = attachment.attachment;
+                //this->subpasses.back().depthStencilAttachmentInitialLayout = renderPass->attachments[attachment.attachment].initialLayout;
+                //this->subpasses.back().depthStencilAttachmentTargetLayout = renderPass->attachments[attachment.attachment].finalLayout;
             };
         };
 

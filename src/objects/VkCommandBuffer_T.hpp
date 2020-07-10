@@ -14,6 +14,7 @@ namespace lvx {
         VkResult result = VK_SUCCESS;
         VkRenderPass_T* renderPassBind = {};
         VkFramebuffer_T* framebufferBind = {};
+        uint32_t currentSubpass = 0u;
 
     public:
         VkCommandBuffer_T() {}
@@ -25,6 +26,8 @@ namespace lvx {
         VkResult Create(const lvx::VkDevice_T* device, const HPTR(VkCommandBufferAllocateInfo) createInfo);
         ID3D12GraphicsCommandList1* Get() const { return commandList.Get(); };
 
+        VkResult BeginRenderPass(const VkRenderPassBeginInfo* pRenderPassBegin, VkSubpassContents contents);
+        VkResult NextSubpass(VkSubpassContents contents);
         VkResult EndRenderPass();
         VkResult BarrierSubpass(const uint32_t& lsp);
     };
