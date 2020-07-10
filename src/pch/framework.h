@@ -12,6 +12,7 @@
 #include <vector>
 #include <memory>
 #include <array>
+#include <bitset>
 
 //*********************************************************
 //
@@ -1046,6 +1047,7 @@ inline D3D12_RESOURCE_STATES getResourceState(const VkImageLayout& layout){
 
 // WIP! NOT All Complete! 
 inline D3D12_RESOURCE_STATES getResourceState(const vkh::VkAccessFlags& accessMask) {
+    if (std::bitset<(sizeof(uint32_t)*CHAR_BIT)>(uint32_t(accessMask)).count() >= 3u) { return D3D12_RESOURCE_STATE_COMMON; }; // If bits overloaded...
     if (accessMask.eTransferRead) { return D3D12_RESOURCE_STATE_COPY_SOURCE; };
     if (accessMask.eTransferWrite) { return D3D12_RESOURCE_STATE_COPY_DEST; };
     if (accessMask.eHostRead) { return D3D12_RESOURCE_STATE_COPY_SOURCE; };
