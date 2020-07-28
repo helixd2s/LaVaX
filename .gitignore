@@ -42,6 +42,7 @@
 .vs/
 .vs/*
 .vs
+*.ilk 
 
 # Visual Studio Artifacts
 build/*/.vs/*
